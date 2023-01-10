@@ -73,7 +73,7 @@ input, select, textarea {
 }
 
 /* Basic */
-@
+
 -ms-viewport {
 	width: device-width;
 }
@@ -3467,6 +3467,10 @@ body.is-ie #sidebar>.inner {
 
 .wrapper.bg_white {
 	background: #fff;
+}
+
+#lojo:hover{
+	cursor: pointer;
 }
 
 #sidebar>nav>ul>li>ul.work_list {

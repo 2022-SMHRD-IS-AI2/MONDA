@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <html>
 <head>
+
 <title>Hyperspace by HTML5 UP</title>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -49,8 +50,9 @@
 						src="./file/<%if(loginMember == null){%>profile_img.png<%
 							}else{%><%=loginMember.getM_profile_img() %><%}%>"/></a>
 					<div class="profile_txt f_right">
-						<p>
-							<%if(loginMember == null){ %><a href="">로그인/회원가입</a>
+					
+												<!-- dialog 로그인/회원가입 -->
+						<p><%if(loginMember == null){ %><span id="lojo" onclick="onDisplay1()">로그인/회원가입</span>
 							<%}else{%><%=loginMember.getM_name() %><br> <a
 								href="logoutCon">로그아웃</a><br> <span><a
 								href="update.jsp">회원정보수정</a></span>
@@ -80,11 +82,12 @@
 	</section>
 
 	<!-- Wrapper -->
+	
 	<div id="wrapper">
 		<!-- login 시작 -->
-		<div class="dialongWrap">
-			<div class="dialog">
-				<span class="dialog__close">&#x2715;</span>
+		<div class="dialongWrap" style="display:none;" id="noneDiv">
+			<div class="dialog" >
+				<span class="dialog__close" onclick="offDisplay2()">&#x2715;</span>
 				<div class="dialog__signup">
 					<h2 class="dialog__title" id="signup">
 						<span>or</span>Sign up
@@ -116,6 +119,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 		<!-- 로그인 끝 -->
 		<!-- Intro -->
@@ -405,6 +409,13 @@
 		<!-- login 스크립트 -->
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script>
+			function onDisplay1(){
+				$('#noneDiv').show();
+			}
+			function offDisplay2(){
+				$('#noneDiv').hide();
+			}
+		
 			function dialog() {
 
 			var dialogBox = $('.dialog'),
@@ -427,7 +438,7 @@
 
 			// Close the dialog - press escape key // key#27
 			$(document).keyup(function(e) {
-				if (e.keyCode === 27) {
+				if (e.keyCode === 27) { // 27 == Esc 키임
 				dialogBox.removeClass('dialog--active');
 				}
 			});
@@ -443,11 +454,15 @@
 			});
 
 			};
+			
+		
+			
+			
 
 			// Run function when the document has loaded
 			$(function() {
 			dialog();
-			});
+			}); 
 		</script>
 		<script>
 			console.clear();

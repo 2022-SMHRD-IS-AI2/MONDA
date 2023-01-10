@@ -78,6 +78,7 @@
 	z-index: 1;
 }
 
+
 /* X에 hover하면 색상 변경 */
 .dialog .dialog__close:hover {
 	color: #788daa;
