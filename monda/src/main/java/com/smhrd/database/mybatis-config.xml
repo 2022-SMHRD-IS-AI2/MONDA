@@ -21,7 +21,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<mappers>
 		<mapper resource="com/smhrd/database/MemberMapper.xml" />
+<<<<<<< HEAD
 		<mapper resource="com/smhrd/database/BoardMapper.xml" />
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-AI2/MONDA.git
 
 	</mappers>
 

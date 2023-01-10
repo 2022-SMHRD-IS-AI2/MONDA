@@ -40,6 +40,7 @@
 		<description></description>
 		<servlet-class>com.smhrd.controller.logoutCon</servlet-class>
 	</servlet>
+<<<<<<< HEAD
 	<servlet>
 		<servlet-name>WriteBoardCon</servlet-name>
 		<display-name>WriteBoardCon</display-name>
@@ -73,5 +74,30 @@
 	<servlet-mapping>
 		<servlet-name>WriteBoardCon</servlet-name>
 		<url-pattern>/WriteBoardCon</url-pattern>
+=======
+	<servlet-mapping>
+		<servlet-name>JoinCon</servlet-name>
+		<url-pattern>/JoinCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>joincon</servlet-name>
+		<url-pattern>/joincon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>logincon</servlet-name>
+		<url-pattern>/logincon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>updatecon</servlet-name>
+		<url-pattern>/updatecon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>logoutcon</servlet-name>
+		<url-pattern>/logoutcon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>logoutCon</servlet-name>
+		<url-pattern>/logoutCon</url-pattern>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-AI2/MONDA.git
 	</servlet-mapping>
 </web-app>

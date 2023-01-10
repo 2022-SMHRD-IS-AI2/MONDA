@@ -186,5 +186,9 @@
 
 				}
 			});
+<<<<<<< HEAD
+=======
+	
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-AI2/MONDA.git
 
 })(jQuery);

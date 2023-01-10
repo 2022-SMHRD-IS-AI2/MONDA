@@ -78,6 +78,10 @@
 	z-index: 1;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-AI2/MONDA.git
 /* X에 hover하면 색상 변경 */
 .dialog .dialog__close:hover {
 	color: #788daa;
