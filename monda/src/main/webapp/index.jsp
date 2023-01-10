@@ -63,7 +63,7 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a href="index.html" class="border_b active">Main</a></li>
+					<li><a href="index.jsp" class="border_b active">Main</a></li>
 					<li><a href="#one" class="border_b">My Space</a>
 						<ul class="work_list">
 							<li><a href="#workspace" class="list_menu">My Workspace</a></li>

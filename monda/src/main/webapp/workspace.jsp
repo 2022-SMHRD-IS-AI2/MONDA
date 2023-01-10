@@ -58,9 +58,9 @@
 					<li><a href="#intro" class="border_b">Main</a></li>
 					<li><a href="#one" class="border_b">My Space</a>
 						<ul class="work_list">
-							<li><a href="workspace.html" class="list_menu active">My
+							<li><a href="workspace.jsp" class="list_menu active">My
 									Workspace</a></li>
-							<li><a href="calendar.html" class="list_menu">나의 캘린더</a></li>
+							<li><a href="calendar.jsp" class="list_menu">나의 캘린더</a></li>
 							<li><a href="#three" class="list_menu">나의 메모</a></li>
 							<li><a href="#four" class="list_menu">나의 코드블럭</a></li>
 						</ul></li>
