@@ -35,7 +35,7 @@
 						value="<%=loginMember.getM_email() %>" placeholder="Email을 입력하세요"
 						style="width: 500px; margin: 0 auto;"></li>
 					<li><input name="filename" type="file"
-						value="<%=loginMember.getM_profile() %>" style="float: left;">프로필
+						value="<%=loginMember.getM_profile_img() %>" style="float: left;">프로필
 						사진</li> <br>
 					<li><span>회원가입일자 : <%=loginMember.getM_joindate() %></span></li>
 					<li>일반<input type="radio" name="type" value="M"> 관리자<input
