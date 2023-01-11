@@ -1,329 +1,316 @@
-@charset "UTF-8";
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.dialongWrap {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, .5);
-	z-index: 999;
-}
+.dialongWrap{position: fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, .5); z-index: 999;  display: none;}
 
 .dialog {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 350px;
-	height: 500px;
-	background: #222;
-	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	border-radius: 15px;
-	padding: 30px;
-	margin-left: -390px;
-	margin-top: -280px;
-	overflow: hidden;
-	-webkit-transition: all 180ms ease-in;
-	transition: all 180ms ease-in;
-	z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 500px;
+  background: #222;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 15px;
+  padding: 30px;
+  margin-left: -390px;
+  margin-top: -280px;
+  overflow: hidden;
+  -webkit-transition: all 180ms ease-in;
+  transition: all 180ms ease-in;
+  z-index: 999;
+  }
+
+.dialog::after{
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 500px;
+  background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf884ad570b50659c5fa2dc2cfb20ecf&auto=format&fit=crop&w=1000&q=100");
 }
 
-.dialog::after {
-	content: "";
-	opacity: 0.8;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	background-size: 500px;
-	background-image:
-		url("https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf884ad570b50659c5fa2dc2cfb20ecf&auto=format&fit=crop&w=1000&q=100");
-}
-
-@media ( max-width : 600px) {
-	.dialog {
-		width: 30%;
-		left: calc(50% - 45%);
-	}
-}
+  @media (max-width: 600px) {
+    .dialog {
+      width: 30%;
+      left: calc(50% - 45%);
+    }
+  }
 
 .dialog.dialog--active {
-	top: 10%;
-	visibility: visible;
-	opacity: 1;
-	-webkit-transition: all 250ms ease-out;
-	transition: all 250ms ease-out;
+  top: 10%;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
 }
 
 .dialog .dialog__close {
-	font-size: 1.5rem;
-	line-height: 2rem;
-	position: absolute;
-	right: 15px;
-	top: 15px;
-	cursor: pointer;
-	padding: 15px;
-	-webkit-transition: color 150ms ease;
-	transition: color 150ms ease;
-	z-index: 1;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  padding: 15px;
+  -webkit-transition: color 150ms ease;
+  transition: color 150ms ease;
+  z-index: 1;
 }
 
 /* X에 hover하면 색상 변경 */
 .dialog .dialog__close:hover {
-	color: #788daa;
+  color: #788daa;
 }
 
-.dialog .dialog__signup {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	width: 65%;
-	z-index: 5;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__signup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  width: 65%;
+  z-index: 5;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__signup.slide-up {
-	top: 5%;
-	-webkit-transform: translate(-50%, 0%);
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__signup.slide-up{
+  top: 5%;
+  -webkit-transform: translate(-50%, 0%);
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__signup.slide-up .dialog__holder, .dialog .dialog__signup.slide-up .submit-btn
-	{
-	opacity: 0;
-	visibility: hidden;
+.dialog .dialog__signup.slide-up .dialog__holder, .dialog .dialog__signup.slide-up .submit-btn{
+  opacity: 0;
+  visibility: hidden;
 }
 
-.dialog .dialog__signup.slide-up .dialog__title {
-	font-size: 1em;
-	cursor: pointer;
+.dialog .dialog__signup.slide-up .dialog__title{
+  font-size: 1em;
+  cursor: pointer;
 }
 
-.dialog .dialog__signup.slide-up .dialog__title span {
-	margin-right: 5px;
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__signup.slide-up .dialog__title span{
+  margin-right: 5px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__signup .dialog__title {
-	color: #fff;
-	font-size: 1.7rem;
-	text-align: center;
+.dialog .dialog__signup .dialog__title{
+  color: #fff;
+  font-size: 1.7rem;
+  text-align: center;
 }
 
-.dialog .dialog__signup .dialog__title span {
-	color: rgba(0, 0, 0, 0.4);
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__signup .dialog__title span{
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__signup .dialog__holder {
-	border-radius: 15px;
-	background-color: #fff;
-	overflow: hidden;
-	margin-top: 50px;
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__signup .dialog__holder{
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__signup .dialog__holder .input {
-	border: 0;
-	outline: none;
-	box-shadow: none;
-	display: block;
-	height: 30px;
-	line-height: 30px;
-	padding: 8px 15px;
-	border-bottom: 1px solid #eee;
-	width: 100%;
-	font-size: 12px;
-	color: #777777;
+.dialog .dialog__signup .dialog__holder .input{
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  font-size: 12px;
 }
 
-.dialog .dialog__login .center .dialog__holder .input:last-child {
-	border-bottom: 0;
+.dialog .dialog__login .center .dialog__holder .input:last-child{
+  border-bottom: 0;
 }
 
-.dialog .dialog__login .center .dialog__holder .input:last-child::-webkit-input-placeholder
-	{
-	color: rgba(0, 0, 0, 0.4);
+.dialog .dialog__login .center .dialog__holder .input:last-child::-webkit-input-placeholder{
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.dialog .dialog__signup .submit-btn {
-	background-color: rgba(0, 0, 0, 0.4);
-	color: rgba(255, 255, 255, 0.7);
-	border: 0;
-	border-radius: 15px;
-	display: block;
-	margin: 15px auto;
-	padding: 15px 45px;
-	width: 100%;
-	font-size: 13px;
-	font-weight: bold;
-	cursor: pointer;
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__signup .submit-btn{
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 45px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__signup .submit-btn:hover {
-	transition: all 0.3s ease;
-	background-color: rgba(0, 0, 0, 0.8);
+.dialog .dialog__signup .submit-btn:hover{
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dialog .dialog__login {
-	position: absolute;
-	top: 20%;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #fff;
-	z-index: 5;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login{
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 5;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: -20px;
-	-webkit-transform: translate(-50%, 0);
-	background-color: #fff;
-	width: 200%;
-	height: 250px;
-	border-radius: 50%;
-	z-index: 4;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  -webkit-transform: translate(-50%, 0);
+  background-color: #fff;
+  width: 200%;
+  height: 250px;
+  border-radius: 50%;
+  z-index: 4;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login .center {
-	position: absolute;
-	top: calc(50% - 10%);
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	width: 65%;
-	z-index: 5;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login .center{
+  position: absolute;
+  top: calc(50% - 10%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  width: 65%;
+  z-index: 5;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login .center .dialog__title {
-	color: #000;
-	font-size: 1.7em;
-	text-align: center;
+.dialog .dialog__login .center .dialog__title{
+  color: #000;
+  font-size: 1.7em;
+  text-align: center;
 }
 
-.dialog .dialog__login .center .dialog__title span {
-	color: rgba(0, 0, 0, 0.4);
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login .center .dialog__title span{
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login .center .dialog__holder {
-	border-radius: 15px;
-	background-color: #fff;
-	border: 1px solid #eee;
-	overflow: hidden;
-	margin-top: 50px;
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login .center .dialog__holder{
+  border-radius: 15px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  overflow: hidden;
+  margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login .center .dialog__holder .input {
-	border: 0;
-	outline: none;
-	box-shadow: none;
-	display: block;
-	height: 30px;
-	line-height: 30px;
-	padding: 8px 15px;
-	border-bottom: 1px solid #eee;
-	width: 100%;
-	font-size: 12px;
+.dialog .dialog__login .center .dialog__holder .input{
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  font-size: 12px;
 }
 
-.dialog .dialog__login .center .dialog__holder .input:last-child {
-	border-bottom: 0;
+.dialog .dialog__login .center .dialog__holder .input:last-child{
+  border-bottom: 0;
 }
 
-.dialog .dialog__login .center .dialog__holder .input::-webkit-input-placeholder
-	{
-	color: rgba(0, 0, 0, 0.4);
+.dialog .dialog__login .center .dialog__holder .input::-webkit-input-placeholder{
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.dialog .dialog__login .center .submit-btn {
-	background-color: #6B92A4;
-	color: rgba(255, 255, 255, 0.7);
-	border: 0;
-	border-radius: 15px;
-	display: block;
-	margin: 15px auto;
-	padding: 15px 45px;
-	width: 100%;
-	font-size: 13px;
-	font-weight: bold;
-	cursor: pointer;
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login .center .submit-btn{
+  background-color: #6B92A4;
+  color: rgba(255, 255, 255, 0.7);
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 45px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login .center .submit-btn:hover {
-	transition: all 0.3s ease;
-	background-color: rgba(0, 0, 0, 0.8);
+.dialog .dialog__login .center .submit-btn:hover{
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dialog .dialog__login.slide-up .center {
-	top: 10%;
-	-webkit-transform: translate(-50%, 0%);
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login.slide-up .center{
+  top:10%;
+  -webkit-transform: translate(-50%, 0%);
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login.slide-up {
-	top: 90%;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login.slide-up{
+  top: 90%;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login.slide-up .center {
-	top: 10%;
-	-webkit-transform: translate(-50%, 0%);
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login.slide-up .center{
+  top: 10%;
+  -webkit-transform: translate(-50%, 0%);
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login.slide-up .dialog__holder, .dialog .dialog__login.slide-up .submit-btn
-	{
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login.slide-up .dialog__holder, .dialog .dialog__login.slide-up .submit-btn{
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login.slide-up .dialog__title {
-	font-size: 1em;
-	margin: 0;
-	padding: 0;
-	cursor: pointer;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login.slide-up .dialog__title{
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
 }
 
-.dialog .dialog__login.slide-up .dialog__title span {
-	margin-right: 5px;
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all 0.3s ease;
+.dialog .dialog__login.slide-up .dialog__title span{
+  margin-right: 5px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
 }
