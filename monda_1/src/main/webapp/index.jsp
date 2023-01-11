@@ -50,7 +50,7 @@
 						<p>
 							<%
 							if (loginMember == null) {
-							%><span id="lojo" onclick="onDisplay()">로그인/회원가입</span>
+							%><span onclick="onDisplay()" style="cursor:pointer">로그인/회원가입</span>
 
 							<%
 							} else {
