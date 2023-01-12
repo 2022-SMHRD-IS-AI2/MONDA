@@ -4,11 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<html>
-<head>
-<title>Hyperspace by HTML5 UP</title>
+<title>MONDA MAIN</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -50,7 +46,7 @@
 						<p>
 							<%
 							if (loginMember == null) {
-							%><span onclick="onDisplay()" style="cursor:pointer">로그인/회원가입</span>
+							%><span onclick="onDisplay()" style="cursor: pointer">로그인/회원가입</span>
 
 							<%
 							} else {
@@ -75,7 +71,8 @@
 					<li><a href="index.jsp" class="border_b active">Main</a></li>
 					<li><a href="#one" class="border_b">My Space</a>
 						<ul class="work_list">
-							<li><a href="#workspace.jsp" class="list_menu">My Workspace</a></li>
+							<li><a href="#workspace.jsp" class="list_menu">My
+									Workspace</a></li>
 							<li><a href="calendar.jsp" class="list_menu">나의 캘린더</a></li>
 							<li><a href="#three" class="list_menu">나의 메모</a></li>
 							<li><a href="codechart.jsp" class="list_menu">나의 코드블럭</a></li>

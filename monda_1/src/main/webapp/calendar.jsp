@@ -1,6 +1,6 @@
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <html>
@@ -26,7 +26,7 @@
 </noscript>
 </head>
 <body class="is-preload">
-<%
+	<%
 	MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	%>
 	<!-- Sidebar -->
@@ -42,7 +42,8 @@
 					<a href=""><img
 						src="./file/<%if (loginMember == null) {%>profile_img.png<%} else {%><%=loginMember.getM_profile_img()%><%}%>" /></a>
 					<div class="profile_txt f_right">
-						<p><%
+						<p>
+							<%
 							if (loginMember == null) {
 							%><span id="lojo" onclick="onDisplay()">로그인/회원가입</span>
 

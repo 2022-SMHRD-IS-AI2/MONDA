@@ -71,8 +71,8 @@ input, select, textarea {
 }
 
 /* Basic */
-
-@-ms-viewport {
+@
+-ms-viewport {
 	width: device-width;
 }
 
@@ -1915,14 +1915,14 @@ form>.fields>.field.quarter {
 	}
 }
 
-label {
+/* label {
 	color: #ffffff;
 	font-weight: bold;
 	line-height: 1.5;
 	margin: 0 0 0.7em 0;
 	display: block;
 	font-size: 1.1em;
-}
+} */
 
 input[type="text"], input[type="password"], input[type="email"], input[type="tel"],
 	select, textarea {
@@ -1990,7 +1990,7 @@ body.is-ie textarea {
 	min-height: 10em;
 }
 
-input[type="checkbox"], input[type="radio"] {
+/* input[type="checkbox"], input[type="radio"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
@@ -2064,7 +2064,7 @@ input[type="checkbox"]+label:before {
 
 input[type="radio"]+label:before {
 	border-radius: 100%;
-}
+} */
 
 /* Icon */
 .icon {
