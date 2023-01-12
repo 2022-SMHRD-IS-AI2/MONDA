@@ -39,10 +39,21 @@
             <div class="inner">
                 <div class="profileWrap">
                     <div class="profile f_left">
-                        <a href=""><img src="./images/profile_img.png"/></a>
+                        <a href=""><img
+						src="./file/<%if (loginMember == null) {%>profile_img.png<%} else {%><%=loginMember.getM_profile_img()%><%}%>" /></a>
                         <div class="profile_txt f_right">
-                            <p>장서연</p>
-                            <span><a href="">회원정보수정</a></span>
+                            <p><%
+							if (loginMember == null) {
+							%><span onclick="onDisplay()" style="cursor: pointer">로그인/회원가입</span>
+
+							<%
+							} else {
+							%><%=loginMember.getM_name()%><br> <a href="logoutCon">로그아웃</a><br>
+							<span><a href="update.jsp">회원정보수정</a></span>
+							<%
+							}
+							%>
+						</p>
                         </div>
                     </div>
                 </div>
