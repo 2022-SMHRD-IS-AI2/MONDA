@@ -85,7 +85,8 @@ input, select, textarea {
 #wrapper .update_nav > ul > li > h5{font-size: 1.8rem; font-weight: 500; color: #333; padding-bottom: 2rem;}
 #wrapper .update_nav > ul > form > li{font-size: 1rem; padding-top: .5rem;}
 #wrapper .update_nav > ul > form > li:first-child{padding-bottom: 1rem;}
-#wrapper .update_nav > ul > form > li > .update_input{background: #fff; border: 1px solid #dedede; border-radius: 5px; padding:.8rem 1rem; outline: none;}
+#wrapper .update_nav > ul > form > li > .update_input{background: #fff; color: #333; border: 1px solid #dedede; border-radius: 5px; padding:.8rem 1rem; outline: none; }
+#wrapper .update_nav > ul > form > li > .update_input::placeholder{color:#ddd; font-size: 1rem;}
 #wrapper .update_nav > ul > form > li > .join_btn{background: #fff; color: #788add; border: 2px solid #788add;}
 
 
@@ -117,7 +118,8 @@ input, select, textarea {
 	display: inline-block;
 	width: calc(100% - 5rem);
 	height: 2.6rem;
-	font-size:.9rem; 
+	font-size:.9rem;
+	color:#333;
 	padding: 0 .5rem;
 	vertical-align: middle;
 	background-color: #f5f5f5;
@@ -125,6 +127,7 @@ input, select, textarea {
 	border-radius: 5px;
   
   }
+.filebox .upload-name::placeholder{color:#ccc;}
 
 .join_label {display: inline-block; font-size: 1rem; line-height: 2rem; padding: 1rem .4rem;}
 .join_label > input{display: inline-block;}
