@@ -41,7 +41,7 @@ public class fullcalendarCON extends HttpServlet {
 		JsonArray arr = new JsonArray();
 		
 		for(int i=0; i<list.size(); i++) {
-			//title(WORK_NAME),start(WORK_S_DT)로 데이터 키를 변경하는 로직구현
+			//title(WORK_NAME),start(WORK_S_DT)로 데이터 키를 변경하는 로직 구현
 			JsonObject obj = new JsonObject();
 			obj.addProperty("title", list.get(i).getWORK_NAME());
 			obj.addProperty("start", list.get(i).getWORK_S_DT());
