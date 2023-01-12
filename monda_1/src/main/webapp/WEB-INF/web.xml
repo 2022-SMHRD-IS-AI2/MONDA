@@ -40,6 +40,31 @@
 		<description></description>
 		<servlet-class>com.smhrd.controller.logoutCon</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>fullcalendarMapperCon</servlet-name>
+		<display-name>fullcalendarMapperCon</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.fullcalendarMapperCon</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>fullCalendarController</servlet-name>
+		<display-name>fullCalendarController</display-name>
+		<description></description>
+		<servlet-class>CalendarController.fullCalendarController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>fullcalendarCon</servlet-name>
+		<display-name>fullcalendarCon</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.fullcalendarCon</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>fullcalendarCON</servlet-name>
+		<display-name>fullcalendarCON</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.fullcalendarCON</servlet-class>
+	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>JoinCon</servlet-name>
 		<url-pattern>/JoinCon</url-pattern>
@@ -63,5 +88,17 @@
 	<servlet-mapping>
 		<servlet-name>logoutCon</servlet-name>
 		<url-pattern>/logoutCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>fullCalendarController</servlet-name>
+		<url-pattern>/fullCalendarController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>fullcalendarCon</servlet-name>
+		<url-pattern>/fullcalendarCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>fullcalendarCON</servlet-name>
+		<url-pattern>/fullcalendarCON</url-pattern>
 	</servlet-mapping>
 </web-app>
