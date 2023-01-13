@@ -75,7 +75,7 @@
 									Workspace</a></li>
 							<li><a href="calendar.jsp" class="list_menu">나의 캘린더</a></li>
 							<li><a href="#three" class="list_menu">나의 메모</a></li>
-							<li><a href="codechart.jsp" class="list_menu">나의 코드블럭</a></li>
+							<li><a href="codeCon" class="list_menu">나의 코드블럭</a></li>
 						</ul></li>
 					<li><a href="#two" class="border_b">Project Name 01</a>
 						<ul class="work_list">

@@ -68,7 +68,7 @@
 							<li><a href="calendar.jsp" class="list_menu active">나의
 									캘린더</a></li>
 							<li><a href="#three" class="list_menu">나의 메모</a></li>
-							<li><a href="codechart.jsp" class="list_menu">나의 코드블럭</a></li>
+							<li><a href="codeCon" class="list_menu">나의 코드블럭</a></li>
 						</ul></li>
 					<li><a href="" class="border_b">Project Name</a>
 						<ul class="work_list">
