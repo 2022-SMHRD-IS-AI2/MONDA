@@ -20,6 +20,8 @@
 	<link rel="stylesheet" href="assets/css/_default.page.client.936d3e7c.css" />
 	<link rel="stylesheet" href="assets/css/Textarea.1ddb1922.css " />
 	
+	
+	
 	<!-- calendar css 연결 -->
 	<link rel="stylesheet" href="./assets/css/root.css">
 	<!-- login css 연결 -->
@@ -100,6 +102,7 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="is-preload">

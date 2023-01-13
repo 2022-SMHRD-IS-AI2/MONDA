@@ -5099,13 +5099,8 @@ table {
 	background-repeat: no-repeat
 }
 
-.primary-button, .primary, input[type=submit], button[type=submit] {
-	background: #14aaf5;
-	border: 1px solid #14aaf5
-}
-
 .primary-button .button-text, .primary-button .new-button-text, .primary .button-text,
-	.primary .new-button-text, input[type=submit] .button-text, input[type=submit] .new-button-text,
+	.primary .new-button-text, 
 	button[type=submit] .button-text, button[type=submit] .new-button-text
 	{
 	color: #fff
@@ -5113,7 +5108,6 @@ table {
 
 .primary-button.hovered, .primary-button:hover:not(.mobile-button):not(.disabled),
 	.primary.hovered, .primary:hover:not(.mobile-button):not(.disabled),
-	input[type=submit].hovered, input[type=submit]:hover:not(.mobile-button):not(.disabled),
 	button[type=submit].hovered, button[type=submit]:hover:not(.mobile-button):not(.disabled)
 	{
 	background: #32c1ff;
@@ -5128,11 +5122,7 @@ table {
 	.primary.hovered .button-text, .primary.hovered .new-button-text,
 	.primary.hovered .glyph, .primary:hover:not(.mobile-button):not(.disabled) .button-text,
 	.primary:hover:not(.mobile-button):not(.disabled) .new-button-text,
-	.primary:hover:not(.mobile-button):not(.disabled) .glyph, input[type=submit].hovered .button-text,
-	input[type=submit].hovered .new-button-text, input[type=submit].hovered .glyph,
-	input[type=submit]:hover:not(.mobile-button):not(.disabled) .button-text,
-	input[type=submit]:hover:not(.mobile-button):not(.disabled) .new-button-text,
-	input[type=submit]:hover:not(.mobile-button):not(.disabled) .glyph,
+	.primary:hover:not(.mobile-button):not(.disabled) .glyph, 
 	button[type=submit].hovered .button-text, button[type=submit].hovered .new-button-text,
 	button[type=submit].hovered .glyph, button[type=submit]:hover:not(.mobile-button):not(.disabled) .button-text,
 	button[type=submit]:hover:not(.mobile-button):not(.disabled) .new-button-text,
@@ -5140,7 +5130,7 @@ table {
 	color: #fff
 }
 
-.primary-button:focus, .primary:focus, input[type=submit]:focus, button[type=submit]:focus
+.primary-button:focus, .primary:focus,button[type=submit]:focus
 	{
 	background: #14aaf5;
 	border: 1px solid #14aaf5;
@@ -5149,13 +5139,13 @@ table {
 }
 
 .primary-button:focus .button-text, .primary-button:focus .new-button-text,
-	.primary:focus .button-text, .primary:focus .new-button-text, input[type=submit]:focus .button-text,
-	input[type=submit]:focus .new-button-text, button[type=submit]:focus .button-text,
+	.primary:focus .button-text, .primary:focus .new-button-text, 
+	button[type=submit]:focus .button-text,
 	button[type=submit]:focus .new-button-text {
 	color: #fff
 }
 
-.primary-button.disabled, .primary.disabled, input[type=submit].disabled,
+.primary-button.disabled, .primary.disabled,
 	button[type=submit].disabled {
 	box-shadow: none;
 	background: #f2f2f2;
@@ -5165,15 +5155,14 @@ table {
 
 .primary-button.disabled .button-text, .primary-button.disabled .new-button-text,
 	.primary-button.disabled .glyph, .primary.disabled .button-text,
-	.primary.disabled .new-button-text, .primary.disabled .glyph, input[type=submit].disabled .button-text,
-	input[type=submit].disabled .new-button-text, input[type=submit].disabled .glyph,
+	.primary.disabled .new-button-text, .primary.disabled .glyph,
 	button[type=submit].disabled .button-text, button[type=submit].disabled .new-button-text,
 	button[type=submit].disabled .glyph {
 	color: var(--color-text-weak);
 	text-shadow: none
 }
 
-.primary-button.disabled:hover, .primary.disabled:hover, input[type=submit].disabled:hover,
+.primary-button.disabled:hover, .primary.disabled:hover,
 	button[type=submit].disabled:hover {
 	box-shadow: none;
 	background: #f2f2f2;
@@ -5183,16 +5172,14 @@ table {
 
 .primary-button.disabled:hover .button-text, .primary-button.disabled:hover .new-button-text,
 	.primary-button.disabled:hover .glyph, .primary.disabled:hover .button-text,
-	.primary.disabled:hover .new-button-text, .primary.disabled:hover .glyph,
-	input[type=submit].disabled:hover .button-text, input[type=submit].disabled:hover .new-button-text,
-	input[type=submit].disabled:hover .glyph, button[type=submit].disabled:hover .button-text,
+	.primary.disabled:hover .new-button-text, .primary.disabled:hover .glyph,button[type=submit].disabled:hover .button-text,
 	button[type=submit].disabled:hover .new-button-text, button[type=submit].disabled:hover .glyph
 	{
 	color: var(--color-text-weak);
 	text-shadow: none
 }
 
-.primary-button.pink, .primary.pink, input[type=submit].pink, button[type=submit].pink
+.primary-button.pink, .primary.pink, button[type=submit].pink
 	{
 	background-color: #ff5263;
 	background-image: linear-gradient(to bottom, #f7a7ba, #ff5263 10%);
@@ -5202,17 +5189,11 @@ table {
 }
 
 .primary-button.pink.hovered, .primary-button.pink:hover:not(.disabled),
-	.primary.pink.hovered, .primary.pink:hover:not(.disabled), input[type=submit].pink.hovered,
-	input[type=submit].pink:hover:not(.disabled), button[type=submit].pink.hovered,
+	.primary.pink.hovered, .primary.pink:hover:not(.disabled),button[type=submit].pink.hovered,
 	button[type=submit].pink:hover:not(.disabled) {
 	background-color: #ff5263;
 	background-image: linear-gradient(to bottom, #f7a7ba, #ff5263 100%);
 	border: 1px solid #a71428
-}
-
-input[type=submit], button[type=submit] {
-	color: #fff;
-	text-shadow: 0 1px #008ce3
 }
 
 .tooltip-button {
@@ -5228,7 +5209,7 @@ input[type=submit], button[type=submit] {
 	background-image: linear-gradient(to bottom, #6e7e91, #212f40 100%)
 }
 
-.generic-input, textarea, .recurly input[type=text], .recurly .recurly-hosted-field
+.generic-input, textarea, .recurly .recurly-hosted-field
 	{
 	border: 1px solid transparent;
 	border: 1px solid transparent;

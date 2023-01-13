@@ -105,8 +105,8 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 }
 
 /* Type */
-/* 22px(16pt) 기준으로 font-size 수정 */
-body, input, select, textarea {
+/* 22px(16pt) 湲곗��쑝濡� font-size �닔�젙 */
+body, select, textarea {
 	color: rgba(255, 255, 255, 0.55);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16pt;
@@ -115,19 +115,19 @@ body, input, select, textarea {
 }
 
 @media screen and (max-width: 1680px) {
-	body, input, select, textarea {
+	body, select, textarea {
 		font-size: 13pt;
 	}
 }
 
 @media screen and (max-width: 1280px) {
-	body, input, select, textarea {
+	body, select, textarea {
 		font-size: 12pt;
 	}
 }
 
 @media screen and (max-width: 360px) {
-	body, input, select, textarea {
+	body, select, textarea {
 		font-size: 11pt;
 	}
 }
@@ -1497,8 +1497,8 @@ hr.major {
 	padding: 0;
 }
 
-/* Button */
-input[type="submit"], input[type="reset"], input[type="button"], button,
+
+input[type="reset"], input[type="button"], button,
 	.button {
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -1507,7 +1507,7 @@ input[type="submit"], input[type="reset"], input[type="button"], button,
 	-moz-transition: border-color 0.2s ease;
 	-webkit-transition: border-color 0.2s ease;
 	-ms-transition: border-color 0.2s ease;
-	transition: border-color 0.2s ease;
+	transition: border-colo/* Button */r 0.2s ease;
 	background-color: transparent;
 	border-radius: 3em;
 	cursor: pointer;
@@ -1526,7 +1526,7 @@ input[type="submit"], input[type="reset"], input[type="button"], button,
 	white-space: nowrap;
 }
 
-input[type="submit"]:after, input[type="reset"]:after, input[type="button"]:after,
+input[type="reset"]:after, input[type="button"]:after,
 	button:after, .button:after {
 	-moz-transform: scale(0.25);
 	-webkit-transform: scale(0.25);
@@ -1548,39 +1548,39 @@ input[type="submit"]:after, input[type="reset"]:after, input[type="button"]:afte
 	width: 100%;
 }
 
-input[type="submit"].icon:before, input[type="reset"].icon:before, input[type="button"].icon:before,
+input[type="reset"].icon:before, input[type="button"].icon:before,
 	button.icon:before, .button.icon:before {
 	margin-right: 0.75em;
 }
 
-input[type="submit"].fit, input[type="reset"].fit, input[type="button"].fit,
+input[type="reset"].fit, input[type="button"].fit,
 	button.fit, .button.fit {
 	width: 100%;
 }
 
-input[type="submit"].small, input[type="reset"].small, input[type="button"].small,
+input[type="reset"].small, input[type="button"].small,
 	button.small, .button.small {
 	font-size: 0.4em;
 }
 
-input[type="submit"].large, input[type="reset"].large, input[type="button"].large,
+input[type="reset"].large, input[type="button"].large,
 	button.large, .button.large {
 	font-size: 0.8em;
 }
 
-input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary,
+input[type="reset"].primary, input[type="button"].primary,
 	button.primary, .button.primary {
 	background-color: #ffffff;
 	color: #312450 !important;
 }
 
-input[type="submit"].primary:after, input[type="reset"].primary:after,
+input[type="reset"].primary:after,
 	input[type="button"].primary:after, button.primary:after, .button.primary:after
 	{
 	display: none;
 }
 
-input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"].disabled,
+input[type="submit"]:disabled, input[type="reset"].disabled,
 	input[type="reset"]:disabled, input[type="button"].disabled, input[type="button"]:disabled,
 	button.disabled, button:disabled, .button.disabled, .button:disabled {
 	cursor: default;
@@ -1588,12 +1588,12 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 	pointer-events: none;
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover,
+input[type="reset"]:hover, input[type="button"]:hover,
 	button:hover, .button:hover {
 	border-color: rgba(255, 255, 255, 0.55) !important;
 }
 
-input[type="submit"]:hover:after, input[type="reset"]:hover:after, input[type="button"]:hover:after,
+input[type="reset"]:hover:after, input[type="button"]:hover:after,
 	button:hover:after, .button:hover:after {
 	opacity: 0.05;
 	-moz-transform: scale(1);
@@ -1602,7 +1602,7 @@ input[type="submit"]:hover:after, input[type="reset"]:hover:after, input[type="b
 	transform: scale(1);
 }
 
-input[type="submit"]:hover:active, input[type="reset"]:hover:active,
+ input[type="reset"]:hover:active,
 	input[type="button"]:hover:active, button:hover:active, .button:hover:active
 	{
 	border-color: #ffffff !important;
@@ -2725,7 +2725,7 @@ body.is-ie .spotlights>section {
 	-webkit-justify-content: center;
 	-ms-justify-content: center;
 	justify-content: center;
-	/* 수정 */
+	/* �닔�젙 */
 	min-height: 937px;
 }
 
@@ -2981,7 +2981,7 @@ body.is-ie .wrapper.fullscreen {
 	min-height: 100%;
 	opacity: 1;
 	width: 100%;
-	/* 수정 */
+	/* �닔�젙 */
 	margin-top: 4rem;
 }
 
@@ -3256,7 +3256,7 @@ body.is-ie #sidebar>.inner {
 
 /* Intro */
 #intro {
-	/* rem단위로 수정 */
+	/* rem�떒�쐞濡� �닔�젙 */
 	width: 100%;
 	margin: 0 auto;
 }
@@ -3279,7 +3279,7 @@ body.is-ie #sidebar>.inner {
 	}
 }
 
-/* 서연 추가 */
+/* �꽌�뿰 異붽� */
 .w5 {
 	width: 5%
 }
@@ -3592,7 +3592,7 @@ body.is-ie #sidebar>.inner {
 	margin-left: 0;
 }
 
-/* 워크스페이스 상단 */
+/* �썙�겕�뒪�럹�씠�뒪 �긽�떒 */
 .work_header .work_headerWrap {
 	position: relative;
 	border-bottom: 1px solid #dedede;
@@ -3656,13 +3656,13 @@ body.is-ie #sidebar>.inner {
 	margin-top: -.9rem;
 }
 
-/* 주간캘린더 */
+/* 二쇨컙罹섎┛�뜑 */
 .bbs_table {
 	width: 100%;
 	min-height: 12rem;
 	border: 1px solid #dedede;
-	line-height: .8rem; /* IE7 수정 */
-	*border-right: 0 /* IE7 수정 */
+	line-height: .8rem; /* IE7 �닔�젙 */
+	*border-right: 0 /* IE7 �닔�젙 */
 }
 
 .bbs_table th:first-child, .bbs_tbl_type2 td:first-child {
@@ -3706,8 +3706,8 @@ body.is-ie #sidebar>.inner {
 }
 
 .schedule_area_v1 {
-	position: relative; /* IE7 수정 */
-	*top: 3px; /* IE7 수정 */
+	position: relative; /* IE7 �닔�젙 */
+	*top: 3px; /* IE7 �닔�젙 */
 	padding: .9rem .25rem .8rem;
 	line-height: .9rem;
 	font-size: .6rem
@@ -3736,7 +3736,7 @@ body.is-ie #sidebar>.inner {
 	cursor: pointer;
 }
 
-/* 메인-워크스페이스 */
+/* 硫붿씤-�썙�겕�뒪�럹�씠�뒪 */
 .bd_right {
 	border-right: none !important;
 }
@@ -3749,8 +3749,8 @@ body.is-ie #sidebar>.inner {
 .wks_table {
 	width: 100%;
 	min-height: 15.5rem;
-	line-height: .8rem; /* IE7 수정 */
-	*border-right: 0 /* IE7 수정 */
+	line-height: .8rem; /* IE7 �닔�젙 */
+	*border-right: 0 /* IE7 �닔�젙 */
 }
 
 .wks_table th:first-child, .bbs_tbl_type2 td:first-child {
@@ -3804,8 +3804,8 @@ body.is-ie #sidebar>.inner {
 }
 
 .schedule_area_v1 {
-	position: relative; /* IE7 수정 */
-	*top: 3px; /* IE7 수정 */
+	position: relative; /* IE7 �닔�젙 */
+	*top: 3px; /* IE7 �닔�젙 */
 	padding: .9rem .25rem .8rem;
 	line-height: .9rem;
 	font-size: .6rem
@@ -3849,12 +3849,12 @@ body.is-ie #sidebar>.inner {
 	box-sizing: border-box;
 }
 
-/* 메인-워크스페이스--테이블 안 */
+/* 硫붿씤-�썙�겕�뒪�럹�씠�뒪--�뀒�씠釉� �븞 */
 .work_status {
 	width: 100%;
 }
 
-/* 메인-채팅리스트 */
+/* 硫붿씤-梨꾪똿由ъ뒪�듃 */
 .chat_list {
 	width: 49.3%;
 	max-height: 19rem;
