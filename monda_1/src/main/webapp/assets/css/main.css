@@ -2982,7 +2982,7 @@ body.is-ie .wrapper.fullscreen {
 	opacity: 1;
 	width: 100%;
 	/* 수정 */
-	margin-top: 5rem;
+	margin-top: 4rem;
 }
 
 body.is-ie #sidebar>.inner {
@@ -3434,6 +3434,12 @@ body.is-ie #sidebar>.inner {
 	margin-bottom: 11pt;
 }
 
+.profile{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+
 .profile a {
 	display: inline-block;
 	color: #fff;
@@ -3443,6 +3449,7 @@ body.is-ie #sidebar>.inner {
 .profile a img {
 	max-width: 60px;
 	max-height: 60px;
+	border-radius: 50%;
 }
 
 .profile_txt {
@@ -3497,6 +3504,7 @@ body.is-ie #sidebar>.inner {
 }
 
 .main_header>ul>li:first-child {
+	width:calc(100% - 62px);
 	margin-left: 0;
 }
 

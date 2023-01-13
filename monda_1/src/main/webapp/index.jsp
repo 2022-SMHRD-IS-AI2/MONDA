@@ -39,9 +39,9 @@
 		</div>
 		<div class="inner">
 			<div class="profileWrap">
-				<div class="profile f_left">
+				<div class="profile">
 					<a href=""><img
-						src="./file/<%if (loginMember == null) {%>profile_img.png<%} else {%><%=loginMember.getM_profile_img()%><%}%>" /></a>
+						src="./images/<%if (loginMember == null) {%>profile_img.png<%} else {%><%=loginMember.getM_profile_img()%><%}%>" /></a>
 					<div class="profile_txt f_right">
 						<p>
 							<%

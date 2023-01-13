@@ -40,7 +40,7 @@
                 <div class="profileWrap">
                     <div class="profile f_left">
                         <a href=""><img
-						src="./file/<%if (loginMember == null) {%>profile_img.png<%} else {%><%=loginMember.getM_profile_img()%><%}%>" /></a>
+						src="./images/<%if (loginMember == null) {%>profile_img.png<%} else {%><%=loginMember.getM_profile_img()%><%}%>" /></a>
                         <div class="profile_txt f_right">
                             <p><%
 							if (loginMember == null) {
@@ -111,8 +111,8 @@
 					<li>
                         <div class="filebox"> 
                             <label for="file">업로드</label> 
-                            <input type="file" id="file"> 
-                            <input class="upload-name" name="filename" value="<%=loginMember.getM_profile_img() %>" placeholder="파일을 선택해주세요">
+                            <input type="file" id="file" name="filename"> 
+                            <input class="upload-name" value="<%=loginMember.getM_profile_img() %>" placeholder="파일을 선택해주세요">
                         </div>
                     </li>
 					<li><span>회원가입일자 : <%=loginMember.getM_joindate() %></span></li>
