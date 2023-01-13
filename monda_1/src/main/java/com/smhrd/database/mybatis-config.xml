@@ -20,9 +20,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</environments>
 
 	<mappers>
+		<mapper resource="com/smhrd/database/BoardMapper.xml" />
 		<mapper resource="com/smhrd/database/MemberMapper.xml" />
-		<mapper resource="com/smhrd/database/fullcalendarMapper.xml"/>
-		<mapper resource="com/smhrd/database/Mapper.xml"/>
+		<mapper resource="com/smhrd/database/fullcalendarMapper.xml" />
+		<mapper resource="com/smhrd/database/Mapper.xml" />
 	</mappers>
 
 </configuration>
