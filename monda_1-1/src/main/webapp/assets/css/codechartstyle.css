@@ -1,0 +1,123 @@
+@import url(../../dist/github-calendar-responsive.css);
+@import url(https://unpkg.com/bag.css@1.0.12/dist/bag.fixed.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/github.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/octicons/3.3.0/octicons.css);
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+
+
+/* 코드차트 */
+.code_folder{max-height:134px; margin-top: 1.8rem; overflow: auto;}
+.code_folder ul{display: flex; justify-content: space-between; font-size: 0; }
+.code_folder ul li{width: 25%; border: 1px solid #dedede; border-radius: 10px; margin-right: 1rem;}
+.code_folder ul li:nth-child(4n){margin-right: 0;}
+.code_folder ul li .folder01{display: flex; align-items: center; justify-content: space-between; padding: 1rem;}
+.code_folder ul li .folder01 .folderCon .octicon{display: inline-block; margin-right: .7rem;}
+.code_folder ul li .folder01 .folderCon a{display: inline-block; font-size: 1rem; color: #444; font-weight: 500; vertical-align: middle;}
+.code_folder ul li .folder01 .folderCon .folder_txt{width: 100%; padding-top: .5rem;}
+.code_folder ul li .folder01 .folderCon .folder_txt p{font-size: .9rem; color: #777;}
+.code_folder ul li .folder01 .code_on{width: 7px; height: 7px; background: tomato; border-radius: 50%;}
+
+
+.bag > h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+@media(min-width:992px){.bag.fixed{width: 860px;}}
+
+pre {
+    background: white;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    overflow: auto;
+    border-radius: 3px;
+    color: #373727;
+}
+
+.calendar {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #444444;
+}
+
+img.spinner {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    height: 49px;
+    padding: 40px 0;
+}
+text.arrow_box {
+	 display: none; 
+}
+
+rect:hover + text.arrow_box {
+  display: block;
+}
+
+
+.pd115{padding: 2rem 2.5rem;}
+.txt_color{color:#aaa;}
+
+
+/* 코드차트페이지 하단 */
+.chart_contents{margin-top: 10px;}
+
+.code_chart_filename {
+	width: 100%;
+	height: 15.5rem;
+	border: 1px solid #dedede;
+	border-radius: 10px;
+	padding: .5rem;
+}
+
+.code_chart_filename table {
+	width: 100%;
+	height: 100%;
+}
+
+.code_chart_filename table tr th {
+	height: 3rem;
+	font-size: 1rem;
+	color: #333;
+	font-weight: 500;
+	border-bottom: 1px solid #dedede;
+}
+
+.code_chart_filename table tr td {
+	position: relative;
+	font-size: .8rem;
+	color: #555;
+	padding: .5rem .5rem .5rem 1.5rem;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+.code_chart_filename table tr td span {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: .5rem;
+	height: .5rem;
+	border-radius: 100%;
+	margin-left: .4rem;
+	margin-top: -.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
