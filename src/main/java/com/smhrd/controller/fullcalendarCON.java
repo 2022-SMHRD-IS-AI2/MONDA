@@ -57,11 +57,11 @@ public class fullcalendarCON extends HttpServlet {
 		
 		System.out.println(arr.toString());
 		
-//		Gson gson =new Gson();
-//		
-//		String json = gson.toJson(list);
-//		
-//		System.out.println(json);
+		Gson gson =new Gson();
+		
+		String json = gson.toJson(list);
+		
+		System.out.println(json);
 		
 		/*
 		 * if (list != null) { // 로그인 성공 System.out.println("조회 성공");
