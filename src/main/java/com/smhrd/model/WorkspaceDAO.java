@@ -20,8 +20,8 @@ public class WorkspaceDAO {
 	//INSERT INTO T_WORKSPACE VALUES (work_name, work_status, work_s_dt, work_e_dt, work_requester, work_wrt)
 	
 	// 워크스페이스 작성
-	public int upload(WorkspaceVO vo) {
-		int cnt = sqlSession.insert("upload", vo);
+	public int workload(WorkspaceVO vo) {
+		int cnt = sqlSession.insert("WSupload", vo);
 		sqlSession.close();
 		
 		return cnt;

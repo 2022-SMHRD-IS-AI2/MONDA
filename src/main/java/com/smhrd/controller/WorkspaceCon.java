@@ -1,6 +1,9 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,20 +24,23 @@ public class WorkspaceCon extends HttpServlet {
 		
 		String project_name = request.getParameter("project_name");//프로젝트 이름
 		String work_name = request.getParameter("work_name");// 워크스페이스 이름
+		
 		String work_s = request.getParameter("work_s");// 워크스페이스 시작
 		String work_e = request.getParameter("work_e");// 워크스페이스 끝 
 		String work_text = request.getParameter("work_text");// 텍스트
-		
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+		Date work_s_d = java.sql.Date.valueOf(work_s);
+		Date work_e_d = java.sql.Date.valueOf(work_e);
 		System.out.println("프로젝트 이름 : " + project_name);
 		System.out.println("워크스페이스 이름 : " + work_name);
 		System.out.println("워크스페이스 시작 : " + work_s);
 		System.out.println("워크스페이스 끝 : " + work_e);
 		System.out.println("텍스트 : " + work_text);
 		
-		WorkspaceVO vo = new WorkspaceVO(project_name, work_name, work_s, work_e, work_text);
+		WorkspaceVO vo = new WorkspaceVO(project_name, work_name, work_s_d, work_e_d, work_text);
 		
 		WorkspaceDAO dao = new WorkspaceDAO();
-		int cnt = dao.upload(vo);
+		int cnt = dao.workload(vo);
 		
 		if(cnt>0) {
 			System.out.println("업로드 성공");
