@@ -1,4 +1,4 @@
-// 각 요소와 컨테이너에 이벤트 리스너를 달아준다.
+// 워크스페이스를 드래그, 요소가 변경된 위치를 인식하여 DB를 변경한다.
 
 // 컨테이너가 들어갈 박스
 // var plans = document.getElementsByClassName('myPlan');
@@ -11,6 +11,7 @@ draggables.forEach(draggable => {
   });
 
   // DB에서 Workspace의 데이터를 변경해야함
+
   draggable.addEventListener("dragend", () => {
     var dragid = $(".dragging").parent().attr('id');
     console.log("드래그 된 위치 : " + dragid);

@@ -5,7 +5,7 @@
 <html>
 
 <head>
-<title>MONDA</title>
+<title>MONDA|WORKSPACE</title>
 <meta charset="utf-8" />
 
 <meta name="viewport"
@@ -196,13 +196,15 @@
 
 												<div
 													class="both-center h-85px w-full flex select-none border-2 rounded border-dashed text-sm text-gray-300">
-													도착한 요청이 없습니다</div>
+													도착한 요청이 없습니다
+												</div>
 
 											</div>
 											</dic>
 										</section>
 
 										<!-- 계획 중 -->
+										
 										<section class="w25">
 											<div class="flex items-center gap-2">
 												<div class="font-medium" tabindex="0" role="button"
@@ -228,7 +230,8 @@
 												<div class="mt-2 flex flex-col gap-2 noplan p-relative">
 													<div
 														class="both-center h-85px w-full flex border-2 rounded border-dashed text-sm text-gray-300 guideline">
-														워크스페이스를 끌어다 놓아보세요!</div>
+														워크스페이스를 끌어다 놓아보세요!
+													</div>
 													<div></div>
 												</div>
 										</section>
