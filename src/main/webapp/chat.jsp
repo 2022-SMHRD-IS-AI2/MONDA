@@ -83,7 +83,7 @@
 			setTimeout(function() {
 				// 재접속
 				webSocket = connectWebSocket(
-						"ws://localhost:8082/20230112/broadsocket", message,
+						"ws://localhost:8082/monda_1/broadsocket", message,
 						open, close, error);
 			});
 		}
@@ -123,7 +123,7 @@
 		};
 		// 웹 소켓 생성
 		var webSocket = connectWebSocket(
-				"ws://localhost:8082/20230112/broadsocket", message, open,
+				"ws://localhost:8082/monda_1/broadsocket", message, open,
 				close, error);
 
 		function sendRoomID() {
