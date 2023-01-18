@@ -509,37 +509,24 @@
 							<th>SUN</th>
 						</tr>
 
-						<%
-						for (int i = 0; i < 4; i++) {
-						%>
-						<tr>
-
-							<%
-							if (mon.size() >= i + 1) {
-							%><td><span class="purple"></span><%=mon.get(i)%></td>
-							<%
-							}if (tues.size() >= i + 1) {
-								%><td><span class="pink"></span><%=tues.get(i)%></td>
-							<%
-							}if (wed.size() >= i + 1) {
-								%><td><span class="orange"></span><%=wed.get(i)%></td>
-							<%
-							}if (thu.size() >= i + 1) {
-								%><td><span class="light_orange"></span><%=thu.get(i)%></td>
-							<%
-							}if (fri.size() >= i + 1) {
-								%><td><span class="light_green"></span><%=fri.get(i)%></td>
-							<%
-							}if (sat.size() >= i + 1) {
-								%><td><span class="green"></span><%=sat.get(i)%></td>
-							<%
-							}if (sun.size() >= i + 1) {
-								%><td><span class="blue"></span><%=sun.get(i)%></td>
-							<%
-							}
-							%>
-						</tr>
-						<% }%>
+	
+	<%for (int i = 0; i < 4; i++) {%>
+	<tr>
+		<td><%if (mon.size() >= i + 1) {%><span class="purple"></span><%=mon.get(i)%><%}%></td>
+		
+		<td><%if (tues.size() >= i + 1) {%><span class="pink"></span><%=tues.get(i)%><%}%></td>
+		
+		<td><%if (wed.size() >= i + 1) {%><span class="orange"></span><%=wed.get(i)%><%}%></td>
+		
+		<td><%if (thu.size() >= i + 1) {%><span class="light_orange"></span><%=thu.get(i)%><%}%></td>
+		
+		<td><%if (fri.size() >= i + 1) {%><span class="light_green"></span><%=fri.get(i)%><%}%></td>
+		
+		<td><%if (sat.size() >= i + 1) {%><span class="green"></span><%=sat.get(i)%><%}%></td>
+		
+		<td><%if (sun.size() >= i + 1) {%><span class="blue"></span><%=sun.get(i)%><%}%></td>
+	</tr>
+	<% }%>
 						
 						
 
