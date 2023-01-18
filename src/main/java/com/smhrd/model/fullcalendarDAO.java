@@ -30,6 +30,12 @@ public class fullcalendarDAO {
 		return selectMember;
 	}
 	
+	public int upload(fullcalendarupdateVO vo) {
+	       int cnt = sqlSession.insert("calenInsert", vo);
+		   sqlSession.close();
+		   
+		   return cnt;
+	   }
 	
 	/*
 	 * public List<fullcalendarVO> selectCalendar(fullcalendarVO vo) {

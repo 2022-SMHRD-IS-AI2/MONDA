@@ -45,6 +45,7 @@ public class fullcalendarCON extends HttpServlet {
 			JsonObject obj = new JsonObject();
 			obj.addProperty("title", list.get(i).getWORK_NAME());
 			obj.addProperty("start", list.get(i).getWORK_S_DT());
+			obj.addProperty("end", list.get(i).getWORK_E_DT());
 			//{title: 파일명, start:2023-01-11}
 			
 			arr.add(obj);
@@ -55,13 +56,13 @@ public class fullcalendarCON extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println(arr.toString());
 		
-		System.out.println(arr.toString());
+		//System.out.println(arr.toString());
 		
 		Gson gson =new Gson();
 		
 		String json = gson.toJson(list);
 		
-		System.out.println(json);
+		//System.out.println(json);
 		
 		/*
 		 * if (list != null) { // 로그인 성공 System.out.println("조회 성공");
