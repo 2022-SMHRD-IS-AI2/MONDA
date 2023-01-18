@@ -130,7 +130,7 @@
 			<div id="intro" class="main_header">
 				<ul>
 					<li class="search"><input type="text" /></li>
-					<li><a href=""><img src="./images/chat_icon01.png" /></a></li>
+					<li><a href="chat.jsp"><img src="./images/chat_icon01.png" /></a></li>
 				</ul>
 			</div>
 			<nav>
