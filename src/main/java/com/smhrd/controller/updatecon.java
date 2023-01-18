@@ -61,10 +61,5 @@ public class updatecon extends HttpServlet {
 			System.out.println("회원정보수정 실패");
 			response.sendRedirect("update.jsp");
 		}
-		
-		
-		
-		
 	}
-
 }

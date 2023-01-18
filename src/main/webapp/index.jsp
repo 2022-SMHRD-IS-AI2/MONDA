@@ -1,3 +1,12 @@
+<%@page import="java.util.Locale"%>
+<%@page import="java.text.ParseException"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="com.smhrd.model.BoardDAO1"%>
+<%@page import="com.smhrd.model.BoardVO"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Calendar"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -29,7 +38,65 @@
 <body class="is-preload">
 	<%
 	MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
+	List<BoardVO> file_list = new BoardDAO1().showBoard();				   // T_file selectAll
+
+	Date nowDate = new Date();											   // 오늘날짜 시간 불러옴
+	SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyMMdd");	   // 날짜 230117 형식 format
+	String codedate = simpleDateFormat.format(nowDate);					   // 오늘날짜 데이터 230117 형식으로 format해서 String codedate 에 담아줌
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");			   // 날짜 2023-01-17 형식 format	
+	Date date = new Date();												   // 오늘날짜 시간 불러옴
+	try {
+		date = sdf.parse(codedate);										   
+		
+	} catch (ParseException e) {
+	}
+	Calendar cal = Calendar.getInstance(Locale.KOREA);
+
+	cal.add(Calendar.DATE, 2 - cal.get(Calendar.DAY_OF_WEEK));
+	String monday = sdf.format(cal.getTime());
+	cal.add(Calendar.DATE, 3 - cal.get(Calendar.DAY_OF_WEEK));
+	String tuesday = sdf.format(cal.getTime());
+	cal.add(Calendar.DATE, 4 - cal.get(Calendar.DAY_OF_WEEK));
+	String wednesday = sdf.format(cal.getTime());
+	cal.add(Calendar.DATE, 5 - cal.get(Calendar.DAY_OF_WEEK));
+	String thursday = sdf.format(cal.getTime());
+	cal.add(Calendar.DATE, 6 - cal.get(Calendar.DAY_OF_WEEK));
+	String friday = sdf.format(cal.getTime());
+	cal.add(Calendar.DATE, 7 - cal.get(Calendar.DAY_OF_WEEK));
+	String saturday = sdf.format(cal.getTime());
+	cal.add(Calendar.DATE, 8 - cal.get(Calendar.DAY_OF_WEEK));
+	String sunday = sdf.format(cal.getTime());
+
+	ArrayList<String> mon = new ArrayList<>();
+	ArrayList<String> tues = new ArrayList<>();
+	ArrayList<String> wed = new ArrayList<>();
+	ArrayList<String> thu = new ArrayList<>();
+	ArrayList<String> fri = new ArrayList<>();
+	ArrayList<String> sat = new ArrayList<>();
+	ArrayList<String> sun = new ArrayList<>();
+	for (int i = 0; i < file_list.size(); i++) {
+		String date1 = String.valueOf(file_list.get(i).getT_UPLOADDAY()).substring(0, 10);
+
+		if (date1.equals(sunday)) {
+			sun.add(file_list.get(i).getREAL_FILE_NAME());
+
+		} else if (date1.equals(monday)) {
+			mon.add(file_list.get(i).getREAL_FILE_NAME());
+		} else if (date1.equals(tuesday)) {
+			tues.add(file_list.get(i).getREAL_FILE_NAME());
+		} else if (date1.equals(wednesday)) {
+			wed.add(file_list.get(i).getREAL_FILE_NAME());
+		} else if (date1.equals(thursday)) {
+			thu.add(file_list.get(i).getREAL_FILE_NAME());
+		} else if (date1.equals(friday)) {
+			fri.add(file_list.get(i).getREAL_FILE_NAME());
+		} else if (date1.equals(saturday)) {
+			sat.add(file_list.get(i).getREAL_FILE_NAME());
+
+		}
+	}
 	%>
+	
 	<!-- Sidebar -->
 	<section id="sidebar">
 		<div class="Logo">
@@ -63,7 +130,7 @@
 			<div id="intro" class="main_header">
 				<ul>
 					<li class="search"><input type="text" /></li>
-					<li><a href=""><img src="./images/chat_icon01.png" /></a></li>
+					<li><a href="chat.jsp"><img src="./images/chat_icon01.png" /></a></li>
 				</ul>
 			</div>
 			<nav>
@@ -585,42 +652,23 @@
 									<th>SAT</th>
 									<th>SUN</th>
 								</tr>
-								<tr>
-									<td><span class="purple"></span>LOGO.png</td>
-									<td><span class="pink"></span>Board.jsp</td>
-									<td><span class="orange"></span>MONDA.png</td>
-									<td><span class="light_orange"></span>MONDA.png</td>
-									<td><span class="light_green"></span>MONDA.png</td>
-									<td><span class="green"></span>MONDA.png</td>
-									<td><span class="blue"></span>MONDA.png</td>
-								</tr>
-								<tr>
-									<td><span class="purple"></span>MONDA.png</td>
-									<td><span class="pink"></span>Board.jsp</td>
-									<td><span class="orange"></span>MONDA.png</td>
-									<td></td>
-									<td><span class="light_green"></span>MONDA.png</td>
-									<td><span class="green"></span>MONDA.png</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><span class="purple"></span>Calendar.jsp</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><span class="purple"></span>calendar.jsp</td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
+	<%for (int i = 0; i < 4; i++) {%>
+	<tr>
+		<td><%if (mon.size() >= i + 1) {%><span class="purple"></span><%=mon.get(i)%><%}%></td>
+		
+		<td><%if (tues.size() >= i + 1) {%><span class="pink"></span><%=tues.get(i)%><%}%></td>
+		
+		<td><%if (wed.size() >= i + 1) {%><span class="orange"></span><%=wed.get(i)%><%}%></td>
+		
+		<td><%if (thu.size() >= i + 1) {%><span class="light_orange"></span><%=thu.get(i)%><%}%></td>
+		
+		<td><%if (fri.size() >= i + 1) {%><span class="light_green"></span><%=fri.get(i)%><%}%></td>
+		
+		<td><%if (sat.size() >= i + 1) {%><span class="green"></span><%=sat.get(i)%><%}%></td>
+		
+		<td><%if (sun.size() >= i + 1) {%><span class="blue"></span><%=sun.get(i)%><%}%></td>
+	</tr>
+	<% }%>
 							</table>
 						</div>
 						<div class="workspace file_upload">
