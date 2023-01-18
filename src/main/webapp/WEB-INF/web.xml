@@ -89,23 +89,10 @@
 		<servlet-class>com.smhrd.controller.WriteBoardCon</servlet-class>
 	</servlet>
 	<servlet>
-<<<<<<< HEAD
 		<servlet-name>fullcalendarupdateCon</servlet-name>
 		<display-name>fullcalendarupdateCon</display-name>
 		<description></description>
 		<servlet-class>com.smhrd.controller.fullcalendarupdateCon</servlet-class>
-=======
-		<servlet-name>test</servlet-name>
-		<display-name>test</display-name>
-		<description></description>
-		<servlet-class>com.smhrd.controller.test</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>BroadSocket</servlet-name>
-		<display-name>BroadSocket</display-name>
-		<description></description>
-		<servlet-class>com.smhrd.controller.BroadSocket</servlet-class>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-AI2/MONDA.git
 	</servlet>
 	
 	<servlet-mapping>
@@ -161,16 +148,7 @@
 		<url-pattern>/WriteBoardCon</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-<<<<<<< HEAD
 		<servlet-name>fullcalendarupdateCon</servlet-name>
 		<url-pattern>/fullcalendarupdateCon</url-pattern>
-=======
-		<servlet-name>test</servlet-name>
-		<url-pattern>/test</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>BroadSocket</servlet-name>
-		<url-pattern>/BroadSocket</url-pattern>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-AI2/MONDA.git
 	</servlet-mapping>
 </web-app>
