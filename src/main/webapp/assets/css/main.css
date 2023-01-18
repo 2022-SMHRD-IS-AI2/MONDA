@@ -3445,6 +3445,7 @@ body.is-ie #sidebar>.inner {
 	display: inline-block;
 	color: #fff;
 	border-bottom: none;
+	font-size: 15px;
 }
 
 .profile a img {
@@ -3956,3 +3957,9 @@ body.is-ie #sidebar>.inner {
 	width: 85%;
 	margin: 3rem auto;
 }
+
+nav > ul > li:visited{background:#556883;-webkit-tap-highlight-color : rgba(0,0,0,0);}
+nav > ul > li:active{background:#556883;-webkit-tap-highlight-color : rgba(0,0,0,0);}
+
+a:visited{background:#556883;-webkit-tap-highlight-color : rgba(0,0,0,0);}
+a:active{background:#556883;-webkit-tap-highlight-color : rgba(0,0,0,0);}

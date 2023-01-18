@@ -975,10 +975,10 @@ table {
 	--color-selected-text-strong: #fff; 
 	--color-selected-icon: #3f6ac4; 
 	--color-selected-icon-rgb: 63, 106, 196; 
-	--color-selected-icon-strong: #fff; 
+	--color-selected-icon-strong: #fff; /* 
 	--color-selected-border: #3f6ac4; 
 	--color-selected-border-hover: #3f6ac4; 
-	--color-selected-border-active: #3f6ac4; 
+	--color-selected-border-active: #3f6ac4;  */
 	--color-selected-background: #f1f2fc; 
 	--color-selected-background-hover: #e7e9fc; 
 	--color-selected-background-active: #dbe0fd; 
@@ -1065,20 +1065,20 @@ table {
 	--color-primary-text-hover: #4464bb; 
 	--color-primary-text-strong: #fff; 
 	--color-primary-icon: #3f6ac4; 
-	--color-primary-icon-strong: #fff; 
+	--color-primary-icon-strong: #fff; /* 
 	--color-primary-border: #3f6ac4; 
 	--color-primary-background-strong: #4573d2; 
 	--color-primary-background-strong-hover: #426dc6; 
-	--color-primary-background-strong-active: #3f66ba; 
+	--color-primary-background-strong-active: #3f66ba;  */
 	--color-on-hold-text: #3f6ac4; 
 	--color-on-hold-text-hover: #4464bb; 
 	--color-on-hold-text-strong: #fff; 
 	--color-on-hold-icon: #3f6ac4; 
-	--color-on-hold-icon-strong: #fff; 
+	--color-on-hold-icon-strong: #fff; /* 
 	--color-on-hold-border: #3f6ac4; 
 	--color-on-hold-background-strong: #4573d2; 
 	--color-on-hold-background-strong-hover: #426dc6; 
-	--color-on-hold-background-strong-active: #3f66ba
+	--color-on-hold-background-strong-active: #3f66ba */
 }
 
 :root .DesignTokenThemeDisablerInternal { 
@@ -1115,17 +1115,17 @@ table {
 	--color-selected-text-strong: #fff; 
 	--color-selected-icon: #3f6ac4; 
 	--color-selected-icon-rgb: 63, 106, 196; 
-	--color-selected-icon-strong: #fff; 
+	--color-selected-icon-strong: #fff; /* 
 	--color-selected-border: #3f6ac4; 
 	--color-selected-border-hover: #3f6ac4; 
-	--color-selected-border-active: #3f6ac4; 
+	--color-selected-border-active: #3f6ac4;  */
 	--color-selected-background: #f1f2fc; 
 	--color-selected-background-hover: #e7e9fc; 
 	--color-selected-background-active: #dbe0fd; 
 	--color-selected-background-strong: #4573d2; 
-	--color-selected-background-strong-rgb: 69, 115, 210; 
+	--color-selected-background-strong-rgb: 69, 115, 210; /* 
 	--color-selected-background-strong-hover: #426dc6; 
-	--color-selected-background-strong-active: #3f66ba; 
+	--color-selected-background-strong-active: #3f66ba;  */
 	--color-success-text: #0d7f56; 
 	--color-success-text-hover: #12714d; 
 	--color-success-text-strong: #1e1f21; 
@@ -5098,11 +5098,11 @@ table {
 	background-position: 100px 200px;
 	background-repeat: no-repeat
 }
-
+/* 
 .primary-button, .primary, button[type=submit] {
 	background: #14aaf5;
 	border: 1px solid #14aaf5
-}
+} */
 
 .primary-button .button-text, .primary-button .new-button-text, .primary .button-text,
 	.primary .new-button-text,  .button-text,  .new-button-text,
@@ -5129,14 +5129,14 @@ table {
 	button[type=submit]:hover:not(.mobile-button):not(.disabled) .glyph {
 	color: #fff
 }
-
+/* 
 .primary-button:focus, .primary:focus, :focus, button[type=submit]:focus
 	{
 	background: #14aaf5;
 	border: 1px solid #14aaf5;
 	box-shadow: 0 0 6px 3px rgba(20, 170, 245, .3);
 	outline: none
-}
+} */
 
 .primary-button:focus .button-text, .primary-button:focus .new-button-text,
 	.primary:focus .button-text, .primary:focus .new-button-text, :focus .button-text,
@@ -7357,13 +7357,13 @@ select {
 	transition-duration: .2s;
 	transition-property: background, border, box-shadow, color
 }
-
+/* 
 .buttonView.buttonView--primary:not(.is-disabled) {
 	background-color: #14aaf5;
 	border-color: #14aaf5;
 	color: #fff;
 	fill: #fff
-}
+} */
 
 .buttonView.buttonView--primary:not(.is-disabled):hover {
 	background-color: #008ce3;
@@ -7444,7 +7444,7 @@ select {
 	{
 	border-left-color: transparent
 }
-
+/* 
 .buttonView.buttonView--toggle:active, .buttonView.buttonView--toggle.is-active,
 	.buttonView.buttonView--toggle.buttonView--secondary:active,
 	.buttonView.buttonView--toggle.buttonView--secondary.is-active {
@@ -7452,7 +7452,7 @@ select {
 	border-color: #14aaf5;
 	color: #fff;
 	fill: #fff
-}
+} */
 
 .right-button-icon:not(:empty) {
 	margin-left: 4px
@@ -94009,10 +94009,10 @@ to {
 	margin: 8px;
 	margin-bottom: 12px
 }
-
+/* 
 .ProjectOverviewExampleModal-image--description {
 	background-color: #14aaf5
-}
+} */
 
 .ProjectOverviewExampleModal-image--milestones {
 	background-color: #00bf9c
@@ -107209,12 +107209,12 @@ to {
 	flex-grow: 1
 }
 
-.InboxStartStateModal-stayUpToDatePane {
+/* .InboxStartStateModal-stayUpToDatePane {
 	background: #14aaf5;
 	display: flex;
 	height: 440px;
 	width: 720px
-}
+} */
 
 .InboxStartStateModal-stayUpToDateImage {
 	image-rendering: moz-crisp-edges;
@@ -131402,20 +131402,20 @@ to {
 	z-index: 100
 }
 
-.ProductBasedTimelineProjectPreview-todayIndicator {
+/* .ProductBasedTimelineProjectPreview-todayIndicator {
 	background-color: #14aaf5;
 	border-radius: 50%;
 	height: 11px;
 	position: absolute;
 	transform: translateY(-50%);
 	width: 11px
-}
-
+} */
+/* 
 .ProductBasedTimelineProjectPreview-todayLine {
 	background-color: #14aaf5;
 	flex-grow: 1;
 	width: 3px
-}
+} */
 
 .ProjectPreviewHeaderBase {
 	align-items: center;
@@ -143760,12 +143760,12 @@ to {
 	white-space: nowrap
 }
 
-.NuxObjectivePeopleManagementPreview-navigationBar--0 {
+/* .NuxObjectivePeopleManagementPreview-navigationBar--0 {
 	border-bottom: 2px solid var(--color-deprecated-teal);
 	color: #14aaf5;
 	font-weight: 500;
 	height: 26px
-}
+} */
 
 .NuxObjectivePersonalTaskPreview-image {
 	border-radius: 12px;

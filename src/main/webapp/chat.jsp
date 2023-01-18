@@ -7,30 +7,34 @@
 <title>Chat</title>
 </head>
 <body>
-<%MemberVO loginMember = (MemberVO) session.getAttribute("loginMember"); %>
-	현재세션 :
-	<input id="nowsession" value="" readonly>
-
-	<form>
-		세션변경 : <input id="roomID" type="text" value="roomName"> <input
-			onclick="sendRoomID()" value="Send" type="button">
-	</form>
-
-
-
-	<form>
-		<!-- 유저 명을 입력하는 텍스트 박스 -->
-		<input id="user" type="text" value=<%=loginMember.getM_name() %>>
-		<!-- 송신 메시지를 작성하는 텍스트 박스 -->
-		<input id="textMessage" type="text">
-		<!-- 메세지를 송신하는 버튼 -->
-		<input onclick="sendMessage()" value="Send" type="button">
-		<!-- WebSocket 접속 종료하는 버튼 -->
-		<input onclick="disconnect()" value="Disconnect" type="button">
-	</form>
-	<br />
-	<!-- 콘솔 메시지의 역할을 하는 로그 텍스트 에리어.(수신 메시지도 표시한다.) -->
-	<textarea id="messageTextArea" rows="10" cols="50" readonly></textarea>
+	<!-- 채팅기능추가 -->
+	<div class="chattingWrap">
+		<%MemberVO loginMember = (MemberVO) session.getAttribute("loginMember"); %>
+		현재 접속한 채팅 :
+		<input id="nowsession" value="" readonly>
+	
+		<form>
+			<input id="roomID" type="text" value="roomName" placeholder="채팅번호를 입력해주세요">
+			<input onclick="sendRoomID()" value="Send" type="button">
+		</form>
+	
+	
+	
+		<form>
+			<!-- 유저 명을 입력하는 텍스트 박스 -->
+			<input id="user" type="text" value=<%=loginMember.getM_name() %>>
+			<!-- 송신 메시지를 작성하는 텍스트 박스 -->
+			<input id="textMessage" type="text">
+			<!-- 메세지를 송신하는 버튼 -->
+			<input onclick="sendMessage()" value="Send" type="button">
+			<!-- WebSocket 접속 종료하는 버튼 -->
+			<input onclick="disconnect()" value="Disconnect" type="button">
+		</form>
+		<br />
+		<!-- 콘솔 메시지의 역할을 하는 로그 텍스트 에리어.(수신 메시지도 표시한다.) -->
+		<textarea id="messageTextArea" rows="10" cols="50" readonly></textarea>
+	</div>
+	<!-- //채팅기능 끝 -->
 	<script type="text/javascript">
 		// 콘솔 텍스트 에리어 오브젝트
 		var messageTextArea = document.getElementById("messageTextArea");

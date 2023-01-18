@@ -181,6 +181,16 @@
 						<div class="flex grow flex-col">
 							<div class="relative grow">
 								<div class="absolute inset-0 overflow-auto bg-gray-50">
+									<!-- 워크스페이스 상단 -->
+									<div class="work_header">
+										<div class="work_headerWrap">
+											<ul>
+												<li class="active"><a href="">메세지목록</a></li>
+												<li class=""><a href="">메세지보드</a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- 워크스페이스 상단 끝 -->
 									<div class="mx-auto p00 pt20">
 										<di class="flex gap-8">
 
