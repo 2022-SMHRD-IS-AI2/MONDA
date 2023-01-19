@@ -18,8 +18,6 @@ public class MemberVO {
 //	private final String email;
 //	private final String pw;
 	
-	
-	
 	@NonNull
 	private String m_id;
 	@NonNull
