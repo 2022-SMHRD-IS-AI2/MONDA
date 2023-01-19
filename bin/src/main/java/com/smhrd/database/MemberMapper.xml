@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.model.MemberDAO_1">
+
+	<insert id="insert" parameterType="com.smhrd.model.MemberVO">
+		insert into t_member values
+		(#{m_id}, #{m_pw},
+		#{m_name}, #{m_email}, #{m_nick},'null',sysdate,'N')
+	</insert>
+
+	<select id="selectOne" resultType="com.smhrd.model.MemberVO"
+		parameterType="com.smhrd.model.MemberVO">
+		select * from t_member where M_id=#{m_id} and
+		M_pw=#{m_pw}
+	</select>
+
+	<update id="updateMember"
+		parameterType="com.smhrd.model.MemberVO">
+		update t_member set m_pw=#{m_pw}, m_name=#{m_name},
+		m_email=#{m_email}, m_nick=#{m_nick}, m_profile_img=#{m_profile_img},
+		m_type=#{m_type} where M_id=#{m_id}
+	</update>
+
+
+</mapper>
+
+
+
+
+
+

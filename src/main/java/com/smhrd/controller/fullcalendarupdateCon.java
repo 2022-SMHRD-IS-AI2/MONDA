@@ -28,8 +28,8 @@ public class fullcalendarupdateCon extends HttpServlet {
 		System.out.println(data);
 
 		JSONArray jarray = new JSONArray(data);
-		
 		for (int i = 0; i < jarray.length(); i++) {
+		
 			System.out.println(jarray.get(i));
 			JSONObject jobj = new JSONObject(jarray.get(i).toString());
 			//System.out.println(jobj.get("title"));

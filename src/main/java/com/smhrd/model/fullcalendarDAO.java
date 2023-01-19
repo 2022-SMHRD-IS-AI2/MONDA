@@ -37,6 +37,27 @@ public class fullcalendarDAO {
 		   return cnt;
 	   }
 	
+	public int calendelete(String WORK_NAME) {
+
+		int cnt = 0;
+		
+		try {
+			cnt = sqlSession.delete("calendelete",WORK_NAME);
+			if(cnt > 0) {
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+			
+			// commit / rollback 생략
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
+	
 	/*
 	 * public List<fullcalendarVO> selectCalendar(fullcalendarVO vo) {
 	 * 
