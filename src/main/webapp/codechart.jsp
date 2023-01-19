@@ -1,3 +1,6 @@
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.io.FileReader"%>
+<%@page import="java.io.File"%>
 <%@page import="java.util.Locale"%>
 <%@page import="java.util.Calendar"%>
 <%@page import="java.text.ParseException"%>
@@ -19,6 +22,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
 <html>
 <head>
 <title>MONDA-캘린더</title>
@@ -61,19 +65,19 @@
 	}
 	Calendar cal = Calendar.getInstance(Locale.KOREA);
 
-	cal.add(Calendar.DATE, 2 - cal.get(Calendar.DAY_OF_WEEK));
+	cal.add(Calendar.DATE, 1 - cal.get(Calendar.DAY_OF_WEEK));
 	String monday = sdf.format(cal.getTime());
-	cal.add(Calendar.DATE, 3 - cal.get(Calendar.DAY_OF_WEEK));
+	cal.add(Calendar.DATE, 2 - cal.get(Calendar.DAY_OF_WEEK));
 	String tuesday = sdf.format(cal.getTime());
-	cal.add(Calendar.DATE, 4 - cal.get(Calendar.DAY_OF_WEEK));
+	cal.add(Calendar.DATE, 3 - cal.get(Calendar.DAY_OF_WEEK));
 	String wednesday = sdf.format(cal.getTime());
-	cal.add(Calendar.DATE, 5 - cal.get(Calendar.DAY_OF_WEEK));
+	cal.add(Calendar.DATE, 4 - cal.get(Calendar.DAY_OF_WEEK));
 	String thursday = sdf.format(cal.getTime());
-	cal.add(Calendar.DATE, 6 - cal.get(Calendar.DAY_OF_WEEK));
+	cal.add(Calendar.DATE, 5 - cal.get(Calendar.DAY_OF_WEEK));
 	String friday = sdf.format(cal.getTime());
-	cal.add(Calendar.DATE, 7 - cal.get(Calendar.DAY_OF_WEEK));
+	cal.add(Calendar.DATE, 6 - cal.get(Calendar.DAY_OF_WEEK));
 	String saturday = sdf.format(cal.getTime());
-	cal.add(Calendar.DATE, 8 - cal.get(Calendar.DAY_OF_WEEK));
+	cal.add(Calendar.DATE, 7 - cal.get(Calendar.DAY_OF_WEEK));
 	String sunday = sdf.format(cal.getTime());
 
 	ArrayList<String> mon = new ArrayList<>();
@@ -510,24 +514,143 @@
 						</tr>
 
 	
-	<%for (int i = 0; i < 4; i++) {%>
+	<%
+	for (int i = 0; i < 4; i++) {
+		
+		
+        
+        
+        
+	%>
 	<tr>
-		<td><%if (mon.size() >= i + 1) {%><span class="purple"></span><%=mon.get(i)%><%}%></td>
-		
-		<td><%if (tues.size() >= i + 1) {%><span class="pink"></span><%=tues.get(i)%><%}%></td>
-		
-		<td><%if (wed.size() >= i + 1) {%><span class="orange"></span><%=wed.get(i)%><%}%></td>
-		
-		<td><%if (thu.size() >= i + 1) {%><span class="light_orange"></span><%=thu.get(i)%><%}%></td>
-		
-		<td><%if (fri.size() >= i + 1) {%><span class="light_green"></span><%=fri.get(i)%><%}%></td>
-		
-		<td><%if (sat.size() >= i + 1) {%><span class="green"></span><%=sat.get(i)%><%}%></td>
-		
-		<td><%if (sun.size() >= i + 1) {%><span class="blue"></span><%=sun.get(i)%><%}%></td>
+		<td class="btn"><%if (mon.size() >= i + 1) {%><span class="purple" ></span><%=mon.get(i)%></td>
+		<div class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+		<% File file = new File("C:///Users/smhrd/Desktop/WebStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/monda_1/file/"+mon.get(i));
+	       FileReader filereader = new FileReader(file);
+	       BufferedReader bufReader = new BufferedReader(filereader);
+	       String line = "";
+        while((line = bufReader.readLine()) != null){
+            out.println(line);%><br><%
+        } %></div>
+             </div><%}%>
+		<td class="btn"><%if (tues.size() >= i + 1) {%><span class="pink"></span><%=tues.get(i)%></td>
+		<div class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+		<% File file = new File("C:///Users/smhrd/Desktop/WebStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/monda_1/file/"+tues.get(i));
+	       FileReader filereader = new FileReader(file);
+	       BufferedReader bufReader = new BufferedReader(filereader);
+	       String line = ""; 
+        while((line = bufReader.readLine()) != null){
+            out.println(line);%><br><%
+        } %></div>
+             </div><%}%>
+		<td class="btn"><%if (wed.size() >= i + 1) {%><span class="orange"></span><%=wed.get(i)%></td>
+		<div class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+		<% File file = new File("C:///Users/smhrd/Desktop/WebStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/monda_1/file/"+wed.get(i));
+	       FileReader filereader = new FileReader(file);
+	       BufferedReader bufReader = new BufferedReader(filereader);
+	       String line = ""; 
+        while((line = bufReader.readLine()) != null){
+            out.println(line);%><br><%
+        } %></div>
+             </div><%}%>
+		<td class="btn"><%if (thu.size() >= i + 1) {%><span class="light_orange"></span><%=thu.get(i)%></td>
+		<div class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+		<% File file = new File("C:///Users/smhrd/Desktop/WebStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/monda_1/file/"+thu.get(i));
+	       FileReader filereader = new FileReader(file);
+	       BufferedReader bufReader = new BufferedReader(filereader);
+	       String line = ""; 
+        while((line = bufReader.readLine()) != null){
+            out.println(line);%><br><%
+        } %></div>
+             </div><%}%>
+		<td class="btn"><%if (fri.size() >= i + 1) {%><span class="light_green"></span><%=fri.get(i)%></td>
+		<div class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+		<% File file = new File("C:///Users/smhrd/Desktop/WebStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/monda_1/file/"+fri.get(i));
+	       FileReader filereader = new FileReader(file);
+	       BufferedReader bufReader = new BufferedReader(filereader);
+	       String line = ""; 
+        while((line = bufReader.readLine()) != null){
+            out.println(line);%><br><%
+        } %></div>
+             </div><%}%>
+		<td class="btn"><%if (sat.size() >= i + 1) {%><span class="green"></span><%=sat.get(i)%></td>
+		<div class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+		<% File file = new File("C:///Users/smhrd/Desktop/WebStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/monda_1/file/"+sat.get(i));
+	       FileReader filereader = new FileReader(file);
+	       BufferedReader bufReader = new BufferedReader(filereader);
+	       String line = ""; 
+        while((line = bufReader.readLine()) != null){
+            out.println(line);%><br><%
+        } %></div>
+             </div><%}%>
+		<td class="btn"><%if (sun.size() >= i + 1) {%><span class="blue"></span><%=sun.get(i)%></td>
+		<div class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+		<% File file = new File("C:///Users/smhrd/Desktop/WebStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/monda_1/file/"+sun.get(i));
+	       FileReader filereader = new FileReader(file);
+	       BufferedReader bufReader = new BufferedReader(filereader);
+	       String line = ""; 
+        while((line = bufReader.readLine()) != null){
+            out.println(line);%><br><%
+        } %></div>
+             </div><%}%>
 	</tr>
 	<% }%>
-						
+	 
+	 <script>
+	  var modals = document.getElementsByClassName("modal");
+	  // Modal을 띄우는 클래스 이름을 가져옵니다.
+	  var btns = document.getElementsByClassName("btn");
+	  // Modal을 닫는 close 클래스를 가져옵니다.
+	  var spanes = document.getElementsByClassName("close");
+	  var funcs = [];
+	   
+	  // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+	  function Modal(num) {
+	    return function() {
+	      // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+	      btns[num].onclick =  function() {
+	          modals[num].style.display = "block";
+	          console.log(num);
+	      };
+	   
+	      // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+	      spanes[num].onclick = function() {
+	          modals[num].style.display = "none";
+	      };
+	    };
+	  }
+	   
+	  // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+	  for(var i = 0; i < btns.length; i++) {
+	    funcs[i] = Modal(i);
+	  }
+	   
+	  // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+	  for(var j = 0; j < btns.length; j++) {
+	    funcs[j]();
+	  }
+	   
+	  // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+	  window.onclick = function(event) {
+	    if (event.target.className == "modal") {
+	        event.target.style.display = "none";
+	    }
+	  };
+    </script>					
 						
 
 					</table>
