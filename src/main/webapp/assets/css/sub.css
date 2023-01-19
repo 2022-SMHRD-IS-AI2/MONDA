@@ -543,6 +543,7 @@
             position: relative;
             top: -100px;
             padding: 10px;
+            height: 50vh; overflow-y: auto;
         }
         /* The Close Button */
         .close {
