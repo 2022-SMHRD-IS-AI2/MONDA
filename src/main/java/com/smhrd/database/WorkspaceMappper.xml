@@ -7,8 +7,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 워크스페이스 추가 -->
 	<insert id="WSupload" parameterType="com.smhrd.model.WorkspaceVO">
 		insert into T_WORKSPACE values (
-		workspace_num.nextval, #{work_name}, #{work_status}, #{work_s}, #{work_e}, '장예슬', '장예슬', #{project_name}, #{work_text})
-		<!-- 순번,  워크스페이스 이름, 워크스페이스 상태  , 시작 날짜   , 마감 날짜  ,  작업 요청자        , 워크 작성자  ,  소속 프로젝트     ,  워크 내용  -->
+		workspace_num.nextval, #{work_name}, #{work_status}, #{work_s}, #{work_e}, #{work_requester}, #{work_wrt}, #{project_name}, #{work_text})
+		<!-- 순번,             워크스페이스 이름 , 워크스페이스 상태  , 시작 날짜   , 마감 날짜  ,  작업 요청자   , 워크 작성자  ,  소속 프로젝트     ,  워크 내용  -->
 	</insert>
 	
 	<!-- 워크스페이스 조회 -->

@@ -22,7 +22,7 @@ public class WorkspaceVO {
 //	}
 
 	// 워크스페이스 번호 (work_seq, number)
-	private BigDecimal work_num;
+//	private BigDecimal work_num;
 	
 	// ---------------화면에 드러나는 부분------------
 	// 워크스페이스 이름 (work_name, varchar2)
@@ -31,7 +31,7 @@ public class WorkspaceVO {
 
 	// 워크스페이스 상태 (work_status, char1)
 	// 계획 중, 진행 중, 완료
-	private char work_status;
+	private String work_status;
 
 	// 시작 날짜 (work_s_dt, date)
 	private Date work_s;
@@ -55,18 +55,5 @@ public class WorkspaceVO {
 	@NonNull
 	private String work_text;
 
-	public WorkspaceVO(String project_name, String work_name, Date work_s, Date work_e,  String work_text) {
-		super();
-		this.work_name = work_name;
-		this.work_s = work_s;
-		this.work_e = work_e;
-		this.project_name = project_name;
-		this.work_text = work_text;
-	}
-	
-	
-	
-	
-	
 	
 }

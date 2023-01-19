@@ -105,7 +105,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 }
 
 /* Type */
-/* 22px(16pt) 기준으로 font-size 수정 */
+/* 22px(16pt) 湲곗��쑝濡� font-size �닔�젙 */
 body, input, select, textarea {
 	color: rgba(255, 255, 255, 0.55);
 	font-family: Arial, Helvetica, sans-serif;
@@ -2726,7 +2726,7 @@ body.is-ie .spotlights>section {
 	-webkit-justify-content: center;
 	-ms-justify-content: center;
 	justify-content: center;
-	/* 수정 */
+	/* �닔�젙 */
 	min-height: 937px;
 }
 
@@ -2982,7 +2982,7 @@ body.is-ie .wrapper.fullscreen {
 	min-height: 100%;
 	opacity: 1;
 	width: 100%;
-	/* 수정 */
+	/* �닔�젙 */
 	margin-top: 4rem;
 }
 
@@ -3257,7 +3257,7 @@ body.is-ie #sidebar>.inner {
 
 /* Intro */
 #intro {
-	/* rem단위로 수정 */
+	/* rem�떒�쐞濡� �닔�젙 */
 	width: 100%;
 	margin: 0 auto;
 }
@@ -3280,7 +3280,7 @@ body.is-ie #sidebar>.inner {
 	}
 }
 
-/* 서연 추가 */
+/* �꽌�뿰 異붽� */
 .w5 {
 	width: 5%
 }
@@ -3406,7 +3406,7 @@ body.is-ie #sidebar>.inner {
 }
 
 .pt20 {
-	padding-top: 2rem;
+	padding-top: 1rem;
 }
 
 .pt30 {
@@ -3573,11 +3573,13 @@ body.is-ie #sidebar>.inner {
 	margin-left: 0;
 }
 
-/* 워크스페이스 상단 */
+/* �썙�겕�뒪�럹�씠�뒪 �긽�떒 */
 .work_header .work_headerWrap {
 	position: relative;
 	border-bottom: 1px solid #dedede;
-	margin: 2rem;
+	/* js 수정 margin: 2rem; */
+	margin-top: 1rem;
+	margin-left: 1rem;
 	padding-bottom: 1rem;
 }
 
@@ -3637,13 +3639,13 @@ body.is-ie #sidebar>.inner {
 	margin-top: -.9rem;
 }
 
-/* 주간캘린더 */
+/* 二쇨컙罹섎┛�뜑 */
 .bbs_table {
 	width: 100%;
 	min-height: 12rem;
 	border: 1px solid #dedede;
-	line-height: .8rem; /* IE7 수정 */
-	*border-right: 0 /* IE7 수정 */
+	line-height: .8rem; /* IE7 �닔�젙 */
+	*border-right: 0 /* IE7 �닔�젙 */
 }
 
 .bbs_table th:first-child, .bbs_tbl_type2 td:first-child {
@@ -3687,8 +3689,8 @@ body.is-ie #sidebar>.inner {
 }
 
 .schedule_area_v1 {
-	position: relative; /* IE7 수정 */
-	*top: 3px; /* IE7 수정 */
+	position: relative; /* IE7 �닔�젙 */
+	*top: 3px; /* IE7 �닔�젙 */
 	padding: .9rem .25rem .8rem;
 	line-height: .9rem;
 	font-size: .6rem
@@ -3717,7 +3719,7 @@ body.is-ie #sidebar>.inner {
 	cursor: pointer;
 }
 
-/* 메인-워크스페이스 */
+/* 硫붿씤-�썙�겕�뒪�럹�씠�뒪 */
 .bd_right {
 	border-right: none !important;
 }
@@ -3730,8 +3732,8 @@ body.is-ie #sidebar>.inner {
 .wks_table {
 	width: 100%;
 	min-height: 15.5rem;
-	line-height: .8rem; /* IE7 수정 */
-	*border-right: 0 /* IE7 수정 */
+	line-height: .8rem; /* IE7 �닔�젙 */
+	*border-right: 0 /* IE7 �닔�젙 */
 }
 
 .wks_table th:first-child, .bbs_tbl_type2 td:first-child {
@@ -3785,8 +3787,8 @@ body.is-ie #sidebar>.inner {
 }
 
 .schedule_area_v1 {
-	position: relative; /* IE7 수정 */
-	*top: 3px; /* IE7 수정 */
+	position: relative; /* IE7 �닔�젙 */
+	*top: 3px; /* IE7 �닔�젙 */
 	padding: .9rem .25rem .8rem;
 	line-height: .9rem;
 	font-size: .6rem
@@ -3830,12 +3832,12 @@ body.is-ie #sidebar>.inner {
 	box-sizing: border-box;
 }
 
-/* 메인-워크스페이스--테이블 안 */
+/* 硫붿씤-�썙�겕�뒪�럹�씠�뒪--�뀒�씠釉� �븞 */
 .work_status {
 	width: 100%;
 }
 
-/* 메인-채팅리스트 */
+/* 硫붿씤-梨꾪똿由ъ뒪�듃 */
 .chat_list {
 	width: 49.3%;
 	max-height: 19rem;

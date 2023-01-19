@@ -224,7 +224,9 @@
 												<span class="self-end text-sm text-gray-400">(0)</span>
 												<div class="grow"></div>
 												<div class="relative" data-headlessui-state="">
-													<button onclick="planDIV()"
+													<button onclick=<% if(loginMember!=null){%>
+													"planDIV()"<%}else if(loginMember==null){%>
+													"noplanDIV()"<%}%>
 														class="flex h-6 w-6 items-center justify-center rounded transition"
 														id="headlessui-menu-button-:r11:" type="button"
 														aria-haspopup="menu" aria-expanded="false"
@@ -256,7 +258,9 @@
 												<span class="self-end text-sm text-gray-400">(0)</span>
 												<div class="grow"></div>
 												<div class="relative" data-headlessui-state="">
-													<button onclick="processDIV()"
+													<button onclick=<% if(loginMember!=null){%>
+													"processSpace()"<%}else if(loginMember==null){%>
+													"noplanDIV()"<%}%>
 														class="flex h-6 w-6 items-center justify-center rounded transition"
 														id="headlessui-menu-button-:r11:" type="button"
 														aria-haspopup="menu" aria-expanded="false"

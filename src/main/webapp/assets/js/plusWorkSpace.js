@@ -4,7 +4,7 @@ function planDIV() {
     // DOM객체 생성
     obj = document.getElementById("planSpace");
     newDiv = document.createElement("div");
-    newDiv.innerHTML = '<form action="WorkspaceCon" method="post"><div class="mt-2" draggable="false"><div class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300"><select name="project_name"><option>프로젝트 이름1</option></select><div style="text-align : center"><input type="date" class="w-40%" name="work_s">➔ <input type="date" class="w-40%" name="work_e"></div><div class="text-right"><input type="text" placeholder="워크스페이스 이름"style="width: 80%;float:left;"name="work_name"><br><a class="self-start text-xs text-gray-400 "href="http://test.com">요청자</a></div><div></div><textarea class="autosize" onkeydown="resize(this)"onkeyup="resize(this)"name="work_text"></textarea><br><div style="text-align : right;"><input type="submit" class="submit_btn_custom" style="margin:auto"></div></div></div></form>';    newDiv.setAttribute("class","myPlan")
+	newDiv.innerHTML = '<form action="WorkspaceCon" method="post"><div class="mt-2" draggable="false"><div class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300"><input type="hidden" value="계획중" name="work_status"><select name="project_name"><option>프로젝트 이름1</option></select><div style="text-align : center"><input type="date" class="w-40%" name="work_s">➔ <input type="date" class="w-40%" name="work_e"></div><div class="text-right"><input type="text" placeholder="워크스페이스 이름"style="width: 80%;float:left;"name="work_name"><br><input class="self-start text-xs text-gray-400 w-20%"  placeholder="요청자" name="requester" ></input></div><div></div><textarea class="autosize" onkeydown="resize(this)"onkeyup="resize(this)"name="work_text"></textarea><br><div style="text-align : right;"><input type="submit" class="submit_btn_custom" style="margin:auto"></div></div></div></form>';
     newDiv.setAttribute("class","myPlan")
 	obj.append(newDiv);
 	
@@ -31,7 +31,7 @@ function processDIV() {
 
     obj = document.getElementById("processSpace");
     newDiv = document.createElement("div");
-    newDiv.innerHTML = '<form action="WorkspaceCon" method="post"><div class="mt-2" draggable="false"><div class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300"><select name="project_name"><option>프로젝트 이름1</option></select><div style="text-align : center"><input type="date" class="w-40%" name="work_s">➔ <input type="date" class="w-40%" name="work_e"></div><div class="text-right"><input type="text" placeholder="워크스페이스 이름"style="width: 80%;float:left;"name="work_name"><br><a class="self-start text-xs text-gray-400 "href="http://test.com">요청자</a></div><div></div><textarea class="autosize" onkeydown="resize(this)"onkeyup="resize(this)"name="work_text"></textarea><br><div style="text-align : right;"><input type="submit" class="submit_btn_custom" style="margin:auto"></div></div></div></form>';
+    newDiv.innerHTML = '<form action="WorkspaceCon" method="post"><div class="mt-2" draggable="false"><div class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300"><input type="hidden" value="진행중" name="work_status"><select name="project_name"><option>프로젝트 이름1</option></select><div style="text-align : center"><input type="date" class="w-40%" name="work_s">➔ <input type="date" class="w-40%" name="work_e"></div><div class="text-right"><input type="text" placeholder="워크스페이스 이름"style="width: 80%;float:left;"name="work_name"><br><a class="self-start text-xs text-gray-400 "href="http://test.com">요청자</a></div><div></div><textarea class="autosize" onkeydown="resize(this)"onkeyup="resize(this)"name="work_text"></textarea><br><div style="text-align : right;"><input type="submit" class="submit_btn_custom" style="margin:auto"></div></div></div></form>';
     newDiv.setAttribute("class","myPlan")
     obj.append(newDiv);
     
@@ -49,3 +49,6 @@ function processDIV() {
     // obj.appendChild(newDiv);
 }
 
+function noplanDIV(){
+	window.alert([ "워크스페이스는 로그인 후 생성할 수 있습니다." ])
+}
