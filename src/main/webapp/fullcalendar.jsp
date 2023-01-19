@@ -19,7 +19,8 @@
 	
 		
 		var calendarEl = document.getElementById('calendar');
-
+		
+		//효창- 처음 ajax 문법몰라서 계속 해맴 ajax 문법 다시공부 필요
 		$.ajax({
 			url : "fullcalendarCON",
 			dataType : "JSON",
@@ -29,7 +30,7 @@
 				showCalendar(result);
 			}
 		});
-
+		//효창 - 전체 보여주기 때문에 showCalendar 함수안에 함수들 감쌈
 		function showCalendar(result) {
 			var calendar = new FullCalendar.Calendar(calendarEl, {
 				headerToolbar : {
@@ -39,7 +40,7 @@
 				},
 				initialDate : '2023-01-17',
 
-				/*  initialView: 'timeGridWeek', //주단위로 보기위한 캘린더
+				/*  initialView: 'timeGridWeek', //효창 - 주단위로 보기위한 캘린더
 				headerToolbar: {
 				    left: 'prev,next today',
 				    center: 'title',
@@ -85,8 +86,9 @@
 					console.log("end "+allEvent[allEvent.length-1]._instance.range.end);
 					var events = new Array(); // Json 데이터를 받기 위한 배열 선언
 					
-					// for를 쓰면 배열에 담겨져있는 기존데이터도 같이 가져오기 때문에 llEvent[allEvent.length-1]._def.title처럼 마지막꺼만 가져오게 수정함
-					//for (var i = 0; i < allEvent.length; i++) {
+					//효창 - for를 쓰면 배열에 담겨져있는 기존데이터도 같이 가져오기 때문에 
+						  //llEvent[allEvent.length-1]._def.title처럼 마지막꺼만 가져오게 수정함
+							//(ㅅㅂ이게문제임)for (var i = 0; i < allEvent.length; i++) {
 					var obj = new Object(); // Json 을 담기 위해 Object 선언
 					// alert(allEvent[i]._def.title); // 이벤트 명칭 알람
 					obj.title = allEvent[allEvent.length-1]._def.title; // 이벤트 명칭  ConsoleLog 로 확인 가능.
@@ -95,8 +97,9 @@
 				
 					events.push(obj);
 					//}
+					//효창- saveData(jsondata) 이거 뭐로 ?
 					//saveData(jsondata);
-
+					//효창- function saveData(jsondata) 이거 뭐로  함수 안만들어도 작동 잘되던데?
 					//function saveData(jsondata) {
 					$.ajax({
 						url : "fullcalendarupdateCon",
@@ -157,6 +160,8 @@
 				},
 				editable : true,
 				dayMaxEvents : true, // allow "more" link when too many events
+				
+						//함수 gson을 사용하여 json형태로 형변환 -> fullcalendarCon에서 변환
 				events : result
 		
 			});
