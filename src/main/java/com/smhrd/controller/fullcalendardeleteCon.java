@@ -28,7 +28,7 @@ public class fullcalendardeleteCon extends HttpServlet {
 		String WORK_NAME = null;
 		int cnt =0;
 		request.setCharacterEncoding("UTF-8");
-		response.setContentType("application/x-json; charset=UTF-8");
+		
 		
 		String data = request.getParameter("jsondata");
 		//System.out.println(data);
@@ -43,7 +43,7 @@ public class fullcalendardeleteCon extends HttpServlet {
 			//System.out.println(jobj.get("start"));
 			//System.out.println(jobj.get("end"));
 		
-			
+			//효창 - 어차피 하나의 값만 있으면 오라클에서 그값에 해당하는 열 전체 삭제 해줘서 하나만 사용함
 			WORK_NAME = String.valueOf(jobj.get("title"));
 		
 			fullcalendardeleteVO vo = new fullcalendardeleteVO(WORK_NAME);
@@ -70,7 +70,8 @@ public class fullcalendardeleteCon extends HttpServlet {
 	    	//response.sendRedirect("select.jsp");
 	    }
 
-		
+		//효창 -  오 response이게 마지막으로 두는줄 알았는데 위에 둬도 코드아래께 인식이 되네?
+		response.setContentType("application/x-json; charset=UTF-8");
 
 
 	}

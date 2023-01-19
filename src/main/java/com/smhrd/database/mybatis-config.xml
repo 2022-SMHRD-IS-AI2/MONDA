@@ -20,6 +20,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</environments>
 
 	<mappers>
+		<!--효창 - 다 해봤는데 코드문제가 없으면 mapper를 봐라 이것 ㅅㅂ   -->
 		<mapper resource="com/smhrd/database/BoardMapper.xml" />
 		<mapper resource="com/smhrd/database/MemberMapper.xml" />
 		<mapper resource="com/smhrd/database/fullcalendarMapper.xml" />

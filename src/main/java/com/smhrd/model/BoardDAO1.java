@@ -16,8 +16,6 @@ public class BoardDAO1 {
 	   // true 넣으면 auto commit
 	   SqlSession sqlSession = sqlSessionFactory.openSession(true);
 	    
-	   //select * from web_board;
-	   //insert into web_board values(num_board.nextval,title,writer,filename,content,sysdate) 
 	   public int upload(BoardVO vo) {
 	       int cnt = sqlSession.insert("upload", vo);
 		   sqlSession.close();
