@@ -3486,6 +3486,7 @@ body.is-ie #sidebar>.inner {
 
 .mainWrap {
 	min-height: 937px;
+	background:#fff;
 	padding: 0 2rem;
 	overflow: hidden;
 }
