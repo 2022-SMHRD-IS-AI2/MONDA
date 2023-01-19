@@ -28,9 +28,29 @@ public class WorkspaceDAO {
 	}
 
 	// 워크스페이스 조회
-	public List<WorkspaceVO> showworkspace(){
-		List<WorkspaceVO> vo = sqlSession.selectList("com.smhrd.model.WorkspaceDAO.showworkspace");
+	// 계획 중
+	public List<WorkspaceVO> showWorkspace_1(String id){	
+		// vo의 일부... work_wrt = getid로 변경해야함
+		//System.out.println(vo.getWork_wrt()+" : 아이디");
+		List<WorkspaceVO> listvo = sqlSession.selectList("showWorkspace_1", id);
 		sqlSession.close();
-		return vo;
+		
+		return listvo;
+	}
+	
+		// 계획 중
+	public List<WorkspaceVO> showWorkspace_2(String id){
+		List<WorkspaceVO> listvo = sqlSession.selectList("showWorkspace_2", id);
+		sqlSession.close();
+		
+		return listvo;
+	}
+	
+		// 종료
+	public List<WorkspaceVO> showWorkspace_3(String id){
+		List<WorkspaceVO> listvo = sqlSession.selectList("showWorkspace_3", id);
+		sqlSession.close();
+		
+		return listvo;
 	}
 }

@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 public class BoardVO {
 	
 		
-		
+		// @NonNull 값인것만 사용하기에 VO로 불러올때 이렇게 구성됨
 		private BigDecimal FILE_SEQ;
 		private BigDecimal WORK_SEQ;
 		

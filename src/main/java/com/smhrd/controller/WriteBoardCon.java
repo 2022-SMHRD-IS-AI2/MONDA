@@ -2,6 +2,7 @@ package com.smhrd.controller;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +26,9 @@ public class WriteBoardCon extends HttpServlet {
 		// MultipartRequest에서 필요한 매개변수 설정
 		// 1. 모든 요청의 정보가 담겨있는 request객체
 		// 2. 업로드 된 파일(이미지)을 저장할 경로
+		//효창 - ./file경로에 file만들어야함 아님 오류남 
 		String path = request.getServletContext().getRealPath("./file");
+		
 		System.out.println(path);
 
 		// 3. 파일의 max size
@@ -41,15 +44,21 @@ public class WriteBoardCon extends HttpServlet {
 
 		// DB에 저장하기 위해서 게시글 정보 가져오기
 		String FILE_NAME = multi.getParameter("FILE_NAME");
-		// String FILE_NAME = multi.getParameter("FILE_NAME");
 		String REAL_FILE_NAME;
 		String FILE_MEMO = multi.getParameter("FILE_MEMO");
+		// INT값 BigDecimal로 형변환 
 		BigDecimal FILE_SIZE = new BigDecimal(1);
 		String EXT ="kb";
 
 		if (multi.getFilesystemName("REAL_FILE_NAME") == null) {
 			REAL_FILE_NAME = "파일전송실패";
 		} else {
+			
+			//효창 - getFilesystemName나 getOriginalFileName() 사용시 주의 
+					//getOriginalFileName : 클라이언트가 업로드 한 파일의 이름.
+					//getFilesystemName : 서버에 실제로 업로드 된 파일 이름
+					// 특히 {filename = URLEncoder.encode(multi.getFilesystemName("filename"),"UTF-8");
+					// 사용했다가 계속 인코딩이름로 파일에 저장됨
 			REAL_FILE_NAME = multi.getFilesystemName("REAL_FILE_NAME");
 		}
 		System.out.println("파일이름 : "+REAL_FILE_NAME);

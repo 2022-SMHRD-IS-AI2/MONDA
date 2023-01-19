@@ -1,4 +1,9 @@
+<%@page import="com.smhrd.model.WorkspaceVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.WorkspaceDAO"%>
 <%@page import="com.smhrd.model.MemberVO"%>
+<%@page import="java.util.ArrayList"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -244,7 +249,40 @@
 														class="both-center h-85px w-full flex border-2 rounded border-dashed text-sm text-gray-300 guideline">
 														워크스페이스를 끌어다 놓아보세요!
 													</div>
-													<div></div>
+													
+													<% if (loginMember!=null){%>
+														
+														<%List<WorkspaceVO> vo1 = new WorkspaceDAO().showWorkspace_1(loginMember.getM_id()); %>
+														
+														<% for (int i = 0; i <vo1.size(); i++){%>
+														
+															<div class="mt-2 draggable mb-8" draggable="true">
+																<div class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300">
+																	<div class="text-xs text-gray-400 f_right f_icon">
+																		<i onclick="w_modify()">M</i><i onclick = "w_delete()">X</i>
+																	</div>
+																	<!-- 프로젝트 이름  -->
+																	<p class="self-start text-xs text-gray-400"><%=vo1.get(i).getWork_project() %></p>
+																	<hr>
+																	<!-- 워크스페이스 이름 -->
+																	<p class="p-1"><%=vo1.get(i).getWork_name() %></p>
+																	<div style="text-align: center">
+																		<!-- 시작 날짜 -->
+																		<span class="self-start text-xs text-gray-400"><%=vo1.get(i).getWork_s_dt() %></span>
+																		<!-- 끝 날짜 -->
+	           														 ➔  <span class="self-start text-xs text-gray-400"><%=vo1.get(i).getWork_e_dt() %></span>
+																	</div>
+																	<div class="text-right">
+																		<!-- 요청자 -->
+																		<a class="self-start text-xs text-gray-400" href=""><%=vo1.get(i).getWork_requester() %></a>
+																	</div>
+																<div></div>
+																<p class="print_textarea"><%=vo1.get(i).getWork_text() %></p>
+															</div>
+														</div>
+														<% } %>
+													<% }else if(loginMember==null){ %>
+													<% } %>
 												</div>
 										</section>
 
@@ -259,7 +297,7 @@
 												<div class="grow"></div>
 												<div class="relative" data-headlessui-state="">
 													<button onclick=<% if(loginMember!=null){%>
-													"processSpace()"<%}else if(loginMember==null){%>
+													"processDIV()"<%}else if(loginMember==null){%>
 													"noplanDIV()"<%}%>
 														class="flex h-6 w-6 items-center justify-center rounded transition"
 														id="headlessui-menu-button-:r11:" type="button"
@@ -278,6 +316,44 @@
 														워크스페이스를 끌어다 놓아보세요!</div>
 													<div></div>
 												</div>
+												
+												<% if (loginMember!=null){%>
+												
+														<%List<WorkspaceVO> vo2 = new WorkspaceDAO().showWorkspace_2(loginMember.getM_id()); %>
+														
+														<% for (int i = 0; i <vo2.size(); i++){%>
+														
+															<div class="mt-2 draggable mb-8" draggable="true">
+																<div class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300">
+																	<div class="text-xs text-gray-400 f_right f_icon">
+																		<i onclick="w_modify()">M</i><i onclick = "w_delete()">X</i>
+																	</div>
+																	<!-- 프로젝트 이름  -->
+																	<p class="self-start text-xs text-gray-400"><%=vo2.get(i).getWork_project() %></p>
+																	<hr>
+																	<!-- 워크스페이스 이름 -->
+																	<p class="p-1"><%=vo2.get(i).getWork_name() %></p>
+																	<div style="text-align: center">
+																		<!-- 시작 날짜 -->
+																		<span class="self-start text-xs text-gray-400"><%=vo2.get(i).getWork_s_dt() %></span>
+																		<!-- 끝 날짜 -->
+	           														 ➔  <span class="self-start text-xs text-gray-400"><%=vo2.get(i).getWork_e_dt() %></span>
+																	</div>
+																	<div class="text-right">
+																		<!-- 요청자 -->
+																		<a class="self-start text-xs text-gray-400" href=""><%=vo2.get(i).getWork_requester() %></a>
+																	</div>
+																<div></div>
+																<p class="print_textarea"><%=vo2.get(i).getWork_text() %></p>
+															</div>
+														</div>
+														
+														<% } %>
+
+												<% }else if(loginMember==null){ %>
+													
+												<% } %>
+													
 										</section>
 
 										<!-- 완료 -->
@@ -300,55 +376,46 @@
 														워크스페이스를 끌어다 놓아보세요!</div>
 													<div></div>
 												</div>
+												
+												<% if (loginMember!=null){%>
+												
+														<%List<WorkspaceVO> vo3 = new WorkspaceDAO().showWorkspace_3(loginMember.getM_id()); 
+															System.out.print("크기"+vo3.size());
+														%>
+														
+														<% for (int i = 0; i <vo3.size(); i++){%>
+														
+															<div class="mt-2 draggable mb-8" draggable="true">
+																<div class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300">
+																	<div class="text-xs text-gray-400 f_right f_icon">
+																		<i onclick="w_modify()">M</i><i onclick = "w_delete()">X</i>
+																	</div>
+																	<!-- 프로젝트 이름  -->
+																	<p class="self-start text-xs text-gray-400"><%=vo3.get(i).getWork_project() %></p>
+																	<hr>
+																	<!-- 워크스페이스 이름 -->
+																	<p class="p-1"><%=vo3.get(i).getWork_name() %></p>
+																	<div style="text-align: center">
+																		<!-- 시작 날짜 -->
+																		<span class="self-start text-xs text-gray-400"><%=vo3.get(i).getWork_s_dt() %></span>
+																		<!-- 끝 날짜 -->
+	           														 ➔  <span class="self-start text-xs text-gray-400"><%=vo3.get(i).getWork_e_dt() %></span>
+																	</div>
+																	<div class="text-right">
+																		<!-- 요청자 -->
+																		<a class="self-start text-xs text-gray-400" href=""><%=vo3.get(i).getWork_requester() %></a>
+																	</div>
+																<div></div>
+																<p class="print_textarea"><%=vo3.get(i).getWork_text() %></p>
+															</div>
+														</div>
+														
+														<% } %>
 
-												<!-- 테스트용
-															(제출용) -->
-												<!-- (DB에 저장된 거 보여주는 용) -->
-												<div class="mt-2 draggable mb-8" draggable="true">
-													<div
-														class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300">
-														<div class="text-xs text-gray-400 f_right f_icon">
-															<i onclick="w_modify()">M</i> <i onclick="w_delete()">X</i>
-														</div>
-														<p class="self-start text-xs text-gray-400">프로젝트 이름1</p>
-														<hr>
-														<p class="p-1">워크스페이스 이름</p>
-														<div style="text-align: center">
-															<span class="self-start text-xs text-gray-400">yyyy-mm-dd</span>
-															➔ <span class="self-start text-xs text-gray-400">yyyy-mm-dd</span>
-														</div>
-														<div class="text-right">
-															<a class="self-start text-xs text-gray-400 "
-																href="http://test.com">요청자</a>
-														</div>
-														<div></div>
-														<p class="print_textarea">테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트
-														</p>
-													</div>
-												</div>
+												<% }else if(loginMember==null){ %>
+													
+												<% } %>
 
-												<div class="mt-2 draggable mb-8" draggable="true">
-													<div
-														class="h-auto p-4 border rounded-md bg-gray-100 grow text-sm font-medium border-brand-300">
-														<div class="text-xs text-gray-400 f_right f_icon">
-															<i onclick="w_modify()">M</i> <i onclick="w_delete()">X</i>
-														</div>
-														<p class="self-start text-xs text-gray-400">프로젝트 이름1</p>
-														<hr>
-														<p class="p-1">워크스페이스 이름</p>
-														<div style="text-align: center">
-															<span class="self-start text-xs text-gray-400">yyyy-mm-dd</span>
-															➔ <span class="self-start text-xs text-gray-400">yyyy-mm-dd</span>
-														</div>
-														<div class="text-right">
-															<a class="self-start text-xs text-gray-400 "
-																href="http://test.com">요청자</a>
-														</div>
-														<div></div>
-														<p class="print_textarea">테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트
-														</p>
-													</div>
-												</div>
 										</section>
 									</div>
 								</div>
