@@ -52,14 +52,18 @@
 				<td><%=i + 1%></td>
 				<!-- i는 변수이기 때문에 표현식을 사용한다 ! -->
 				<td><a href="./file/<%=vo.get(i).getREAL_FILE_NAME()%>"
+					
 					download>다운로드</a></td>
-
+					<!--효창 - download 기능구현 실패 -->
 				<%
 				String size = vo.get(i).getREAL_FILE_NAME();
 				String ext = vo.get(i).getREAL_FILE_NAME();
 								
-				// String size1 = size.toEngineeringString(); 
+				// String size1 = size.toEngineeringString();
+				//효창 - 시간 관계상 파일 사이즈는 불러 와지는데 저장을 못하고 캘린더로 넘어감
 				Path path = Paths.get(
+						//효창 - 경로 지정할때 \ 하나면 주석때문에 인식 못함/ 이것도 어느로직에서는 안먹혔음 \\가장 무난함
+						//효창 - 파일 업로드 할때 깃을 PULL , PUSY할때 경로로 지정한 폴더가 없어서 새로 만들어야됨
 						"C:\\Users\\smhrd\\Desktop\\webStudy\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp3\\wtpwebapps\\monda_1\\file\\"+ size);
 				System.out.print(path);
 				long path2 = Files.size(path);
@@ -69,7 +73,7 @@
 				<td><%=vo.get(i).getFILE_NAME()%></td>
 				<td><%=vo.get(i).getREAL_FILE_NAME()%></td>
 				<td><%=path2%>kb</td>
-				<%--  <td><%=vo.get(i).getFILE_SIZE()%></td> --%>
+				<!--효창- 확장자는 이름에  substring(ext.length()-3 썼음 마찬가지로 저장 로직 시간문제로 구현 실패 -->
 				<td><%=ext.substring(ext.length()-3, ext.length())%></td>
 				<td><%=vo.get(i).getFILE_MEMO()%></td>
 				<td><%=vo.get(i).getT_UPLOADDAY()%></td>
@@ -84,13 +88,11 @@
 	</div>
 
 
-	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 </body>
 </html>

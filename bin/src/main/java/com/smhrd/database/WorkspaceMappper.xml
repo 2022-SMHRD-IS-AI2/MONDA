@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.model.WorkspaceVO">
+	<!-- 워크스페이스 추가 -->
+	<insert id="WSupload" parameterType="com.smhrd.model.WorkspaceVO">
+		insert into T_WORKSPACE values (
+		workspace_num.nextval, #{work_name}, #{work_status}, #{work_s}, #{work_e}, '장예슬', '장예슬', #{project_name}, #{work_text})
+		<!-- 순번,  워크스페이스 이름, 워크스페이스 상태  , 시작 날짜   , 마감 날짜  ,  작업 요청자        , 워크 작성자  ,  소속 프로젝트     ,  워크 내용  -->
+	</insert>
+	
+	<!-- 워크스페이스 조회 -->
+	<select id="showWorkspace" resultType="com.smhrd.model.WorkspaceVO" >
+		select * from T_WORKSPACE where WORK_WRT=#{work_wrt};
+	</select>
+</mapper>

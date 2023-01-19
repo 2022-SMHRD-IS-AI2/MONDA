@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.model.fullcalendarDAO" >
+	
+	<select id="calenList" resultType="com.smhrd.model.fullcalendarVO" parameterType = "com.smhrd.model.fullcalendarVO">
+		<!-- select * from T_WORKSPACE -->
+		
+		select * from T_WORKSPACE 
+	</select>
+	
+	<insert id="calenInsert" parameterType="com.smhrd.model.fullcalendarVO">
+		<!-- insert into T_WORKSPACE values(WORK_SEQ.nextval,WORK_NAME=#{WORK_NAME},WORK_STATUS=#{WORK_STATUS},WORK_S_DT=#{WORK_S_DT},WORK_E_DT=#{WORK_E_DT},WORK_REQUESTER=#{WORK_REQUESTER},WORK_WRT=#{WORK_WRT},WORK_PROJECT=#{WORK_PROJECT},WORK_TEXT=#{WORK_TEXT})
+			insert into T_WORKSPACE values (workspace_num.nextval, #{work_name}, #{work_status}, #{work_s}, #{work_e}, '장예슬', '장예슬', #{project_name}, #{work_text})
+			
+	 	insert into T_WORKSPACE values(WORK_SEQ.nextval
+	 -->
+			insert into T_WORKSPACE values (workspace_num.nextval, #{WORK_NAME}, 'a', TO_DATE(#{WORK_S_DT}, 'YYYY-MM-DD') , TO_DATE(#{WORK_E_DT}, 'YYYY-MM-DD') , '윤효창', '윤효창', '1순위', '문제이상여부')
+	 </insert>
+	 
+	 <delete id = "calendelete" parameterType = "String">
+       delete from T_WORKSPACE where WORK_NAME = #{WORK_NAME}
+    </delete>
+	 
+	<!-- WORK_SEQ.nextval -->
+</mapper>

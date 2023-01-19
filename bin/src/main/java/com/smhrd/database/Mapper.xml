@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 코드차트 Mapper -->
+<mapper namespace="com.smhrd.model.DAO">
+	
+	<select id="selectcount" resultType="String" parameterType="String">
+		select count(*) from t_file
+		where to_char(t_uploadday,'YY/MM/DD') = #{strNowDate}
+	</select>
+	<update id="updatecount"
+		parameterType="com.smhrd.model.VO">
+		update T_code set count=#{count}
+	    where to_char(codedate,'YY/MM/DD')=#{codedate}
+	</update>
+	<select id="selectList"
+		resultType="com.smhrd.model.VO">
+		select * from T_code
+	</select>
+</mapper>
+
+
+
+
+
+
