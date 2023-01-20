@@ -26,8 +26,6 @@
 <link rel="stylesheet" href="./assets/css/root.css">
 <!-- login css 연결 -->
 <link rel="stylesheet" href="./assets/css/login.css">
-<!-- chat css 연결 -->
-<link rel="stylesheet" href="./assets/css/chat.css">
 
 
 <script src="https://kit.fontawesome.com/481f0bd49e.js"
@@ -128,7 +126,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div id="intro" class="main_header">
 				<ul>
 					<li class="search"><input type="text" /></li>
