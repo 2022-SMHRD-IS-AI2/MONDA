@@ -532,8 +532,7 @@
         /* Modal Content/Box */
         .modal-content {
             margin: 15% auto; /* 15% from the top and centered */
-            background: rgba( 69, 139, 197, 0.70 );
-            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            background: #f9f9f9;
             backdrop-filter: blur( 13.5px );
             -webkit-backdrop-filter: blur( 13.5px );
             border-radius: 10px;
@@ -542,7 +541,7 @@
             height: 500px;
             position: relative;
             top: -100px;
-            padding: 10px;
+            padding: 30px 20px;
             height: 50vh; overflow-y: auto;
         }
         /* The Close Button */
@@ -551,6 +550,7 @@
             float: right;
             font-size: 28px;
             font-weight: bold;
+            margin-top: -10px;
         }
         .close:hover,
         .close:focus {
